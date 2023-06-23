@@ -6,8 +6,8 @@ from django.shortcuts import render
 
 def index(request):
   
-    template = loader.get_template("mainsite/index.html")
+    template = loader.get_template("mainsite\index.html")
     context = {
         "key": 0,
     }
-    return render(request, "mainsite/index.html", context)
+    return render(request, 'mainsite\index.html', context)
