@@ -6,15 +6,17 @@ from django.shortcuts import render
 
 def index(request):
   
-    template = loader.get_template("mainsite\index.html")
+    
     context = {
         "key": 0,
     }
     return render(request, 'mainsite\index.html', context)
-def flight(request):
+
+
+def proyect1(request):
   
-    template = loader.get_template("mainsite\fight.html")
+
     context = {
         "key": 0,
     }
-    return render(request, 'mainsite\flight.html', context)
+    return render(request, 'mainsite\proyect1.html', context)

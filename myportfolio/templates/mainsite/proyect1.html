@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+
+     <title>Stefano's Portfolio - Profile HTML Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.carousel.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.theme.default.min.css' %}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'mainsite/css/tooplate-ben-resume-style.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Stefano Portfolio
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#intro" class="nav-link smoothScroll">Introduction</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">Why hire me?</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link smoothScroll">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                    <a href="#" class="custom-btn btn" download>Download CV</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="intro">
+
+    </section>
+
+
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'mainsite/js/jquery.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/smoothscroll.js' %}"></script>
+     <script src="{% static 'mainsite/js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/custom.js' %}"></script>
+
+</body>
+</html>

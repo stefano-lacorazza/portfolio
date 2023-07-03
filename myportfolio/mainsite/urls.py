@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("flight/", views.flight, name="index"),
+    path("proyect1/", views.proyect1, name="proyect1"),
     path("admin/", admin.site.urls),
 ]
