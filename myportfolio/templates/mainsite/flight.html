@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+
+     <title>Stefano's Portfolio - Profile HTML Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.carousel.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.theme.default.min.css' %}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'mainsite/css/tooplate-ben-resume-style.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Stefano Portfolio
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#intro" class="nav-link smoothScroll">Introduction</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">Why hire me?</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link smoothScroll">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                    <a href="#" class="custom-btn btn" download>Download CV</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="intro">
+
+         <div class="container">
+            <div class="row">
+
+                  <div class="mx-auto col-lg-5 col-md-5 col-10">
+                      <img src="{% static 'mainsite/images/Stefano.jpg' %}" class="img-fluid" alt="Ben Resume HTML Template">
+                  </div>
+
+                   <div class="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
+                        <div class="hero-text">
+
+                            <h1 class="hero-title">👋 Stefano Lacorazza, data scientist</h1>
+
+                            <a href="mailto: stefano.lacorazza@gmail.com" class="email-link">
+                                stefano.lacorazza@gmail.com
+                            </a>
+                          
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h3 class="mb-4">Stefano's resume</h3>
+
+                    <p>Resumen de hoja de vida y tal vez lista de cursos.</p>
+
+                    <p>Porque elegirme.</p>
+
+                    <ul class="mt-4 mb-5 mb-lg-0 profile-list list-unstyled">
+                        <li><strong>Full Name :</strong> Stefano Lacorazza </li>
+
+                        <li><strong>Date of Birth:</strong> 03 April 1989</li>
+
+                        <li><strong>Website :</strong> POR CONSEGUIR</li>
+
+                        <li><strong>Email :</strong> stefano.lacorazza@gmail.com</li>
+
+                        <li><strong>Github :</strong> <a  href="https://github.com/stefano-lacorazza" target="_parent">@stefano-lacorazza</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5 mx-auto col-md-6 col-12">
+                    <img src="{% static 'mainsite/images/puesto.jpg' %}" class="about-image img-fluid" alt="Ben's Resume HTML Template">
+                </div>
+
+            </div>
+            <div class="row about-third">
+            	<div class="col-lg-4 col-md-4 col-12">
+                <h3>Degrees</h3>
+                <p><ul>
+                  <li>Physics major in Universidad de los Andes</li>
+                  <li>Mathematics minor in Universidad de los Andes</li>
+                  <li>Python</li>
+                  <li>Django</li>
+                  <li>Applied data science</li>
+                </ul>
+                
+                </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                <h3>Skills</h3>
+                <p><ul>
+                  <li>Python</li>
+                  <li>Django</li>
+                  <li>Statistics and probability</li>
+                  <li>MySQL</li>
+                  <li>Git</li>
+                  <li>Machine learning</li>
+                </ul></p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                <h3>Interpersonal skills</h3>
+                <p><ul>
+                  <li>Leadership</li>
+                  <li>Empathy</li>
+                  <li>Public speaking</li>
+                  <li>Effective communication skills</li>
+                  <li>Attention to detail</li>
+                </ul></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIAL -->
+     <section class="testimonials section-padding" id="testimonials">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-12">
+                        <h3 class="mb-5 text-center">Projects</h3>
+
+                        <div class="owl-carousel owl-theme" id="testimonials-carousel">
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="{% static 'mainsite/images/Proyects/proyect1.png' %}" class="img-fluid" alt="testimonials image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p>Avianca vs Latam</p>
+
+              
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="{% static 'mainsite/images/Proyects/proyect2.png' %}" class="img-fluid" alt="testimonials image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p>Proyecto 2</p>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="{% static 'mainsite/images/Proyects/proyect3.png' %}" class="img-fluid" alt="testimonials image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p>Proyecto 3</p>
+
+                             
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="{% static 'mainsite/images/Proyects/proyect4.png' %}" class="img-fluid" alt="testimonials image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p>Proyecto 4</p>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+     <section class="contact section-padding pt-0" id="contact">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <form action="#" method="get" class="contact-form webform"  role="form">
+                
+                <div class="form-group d-flex flex-column-reverse">
+                    <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="Your Name">
+
+                    <label for="cf-name" class="webform-label">Full Name</label>
+                </div>
+
+                <div class="form-group d-flex flex-column-reverse">
+                    <input type="email" class="form-control" name="cf-email" id="cf-email" placeholder="Your Email">
+
+                    <label for="cf-email" class="webform-label">Your Email</label>
+                </div>
+
+                <div class="form-group d-flex flex-column-reverse">
+                    <textarea class="form-control" rows="5" name="cf-message" id="cf-message" placeholder="Your Message"></textarea>
+
+                    <label for="cf-message" class="webform-label">Message</label>
+                </div>
+
+                <button type="submit" class="form-control" id="submit-button" name="submit">Send</button>
+            </form>
+          </div>
+
+            <div class="mx-auto col-lg-4 col-md-6 col-12">
+                <h3 class="my-4 pt-4 pt-lg-0">Contact me</h3>
+
+                <p class="mb-1">+57 3112873140</p>
+
+                <p>
+                    <a href="#">
+                        Stefano.lacorazza@gmail.com
+                    <i class="fas fa-arrow-right custom-icon"></i>
+                    </a>
+                </p>
+
+                <ul class="social-links mt-2">
+                    <li><a href="https://fb.com/tooplate" rel="noopener" class="fab fa-facebook"></a></li>
+                    <li><a href="#" rel="noopener" class="fab fa-twitter"></a></li>
+                    <li><a href="#" rel="noopener" class="fab fa-instagram"></a></li>
+                    <li><a href="#" rel="noopener" class="fab fa-linkedin"></a></li>
+                    <li><a href="#" rel="noopener" class="fab fa-youtube"></a></li>
+                </ul>
+        
+            </div>
+
+        </div>
+      </div>
+    </section>
+     <!-- SCRIPTS -->
+     <script src="{% static 'mainsite/js/jquery.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/smoothscroll.js' %}"></script>
+     <script src="{% static 'mainsite/js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/custom.js' %}"></script>
+
+</body>
+</html>
