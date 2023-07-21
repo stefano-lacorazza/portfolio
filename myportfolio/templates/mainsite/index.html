@@ -11,6 +11,10 @@
      <meta name="keywords" content="">
      <meta name="author" content="Tooplate">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'mainsite/favicon/apple-touch-icon.png' %}">
+     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'mainsite/favicon/favicon-32x32.png' %}">
+     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'mainsite/favicon/favicon-16x16.png' %}">
+     <link rel="manifest" href="{% static 'mainsite/favicon/site.webmanifest' %}">
 
      <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
      <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
@@ -29,7 +33,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                Stefano Portfolio
+                 Portfolio Stefano Lacorazza
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +60,7 @@
                 </ul>
 
                 <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="#{% static 'mainsite/Files/MyResume.pdf' %}" class="custom-btn btn" download>Download CV</a>
+                    <a href="{% static 'mainsite/Files/MyResume.pdf' %}" class="custom-btn btn" download="CV">Download CV</a>
                 </div>
             </div>
 
