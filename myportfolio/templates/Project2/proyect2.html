@@ -21,7 +21,7 @@
      <link rel="stylesheet" href="{% static 'mainsite/css/owl.carousel.min.css' %}">
      <link rel="stylesheet" href="{% static 'mainsite/css/owl.theme.default.min.css' %}">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="{% static 'mainsite/css/w3.css' %}">
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="{% static 'mainsite/css/tooplate-ben-resume-style.css' %}">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -138,7 +138,7 @@
                         With the model at hand, the final step of the project involved a comprehensive analysis of the results. This analysis aimed to gain deeper
                          insights into the factors driving rent prices in Colombia and to identify the most influential features affecting rental rates.
                     </p>
-                    <p>
+                    <p><img src="{% static 'Project2\images\weight_chart.png' %}" style="float: right;width:500px;height:400px;margin-left:15px;">
                         Upon close examination of the model's output, it became evident that the area of the property emerged as the most critical determinant of 
                         rent prices. Larger properties tended to command higher rents, which wasn’t all that surprising.
                         Following closely in significance were the location and antiquity of the property. The model highlighted the strong impact of location on rental
@@ -157,10 +157,7 @@
                          had the potential to empower individuals in their apartment hunting endeavors. 
                     </p>
                 </div>
-                    <div class="w3-container w3-center">
-                    <img src="{% static 'Project2\images\weight_chart.png' %}" class="img-fluid" alt="testimonials image" width="500" 
-                    height="600">
-                    </div>
+                    
 
               
 
