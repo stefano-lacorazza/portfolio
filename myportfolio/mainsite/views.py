@@ -21,13 +21,7 @@ def proyect1(request):
     }
     return render(request, 'mainsite\proyect1.html', context)
 
-def proyect2(request):
-  
 
-    context = {
-        "key": 0,
-    }
-    return render(request, 'mainsite\proyect2.html', context)
 
 def proyect3(request):
   

@@ -118,6 +118,31 @@
                         the subsequent stages of model training and evaluation. Armed with this comprehensive and cleaned data, I was eager to delve into the realm 
                         of machine learning algorithms to create a powerful rent price prediction model.
                         </p>
+                        <p>
+                            Here you can see the code used to clean and prepare the data:
+                        </p>
+                        <pre>
+                            <code>
+                                dataset = pd.read_csv("files/frame.csv")
+                                dataset = dataset.drop(columns = [ 'Barrio', 'Unnamed: 0', 'Codigo Web', 'Titulo', 'Barrio Catastral','Precio venta', 
+                                'Zona', 'Sector','Interior', 'Exterior',  'Direccion', 'Url'])
+                                dataset = dataset.drop([0])
+                                dataset['Long'] = dataset['Long'].replace([0],[np.nan])
+                                dataset['Lat'] = dataset['Lat'].replace([0],[np.nan])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Más de 20 años'],[25])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 5 y 10 años'],[7])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 10 y 20 años'],[15])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 0 y 5 años'],[2])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 10 y 20 año'],[15])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Remodelado'],[0])
+                                dataset['Antiguedad'] = dataset['Antiguedad'].replace([np.nan],[0])
+                                dataset = dataset.dropna()
+                                dataset['Precio arriendo'] = dataset['Precio arriendo'].apply(lambda x: x.replace('$', ''))
+                                dataset['Precio arriendo'] = dataset['Precio arriendo'].apply(lambda x: x.replace('.', ''))
+                                dataset['Ciudad'] = dataset['Ciudad'].apply(lambda x: city_cleaner(x))
+                                dataset['Estrato'] = dataset['Estrato'].apply(lambda x: x.replace('Comercial', '0'))
+                            </code>
+                          </pre>
                     <h3 class="w3-xlarge">Step 3: Training the model</h3>
                     <p>With the refined dataset in hand, I proceeded to the phase of training the prediction model. To capture the complexity of the rental market,
                          I explored a diverse set of machine learning algorithms, including linear regression, random forest regression, and Support Vector Machine (SVM).</p>
@@ -158,7 +183,11 @@
                     </p>
                 </div>
                     
-
+                <form action="/project2/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit">
+                </form>
               
 
             </div>

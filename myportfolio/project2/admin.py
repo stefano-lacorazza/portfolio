@@ -1,3 +1,6 @@
 from django.contrib import admin
+from location_field.models.plain import PlainLocationField
 
-# Register your models here.
+from .models import Place
+
+admin.site.register(Place)

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project1',
+    'project2',
+    'location_field.apps.DefaultConfig',
 
 ]
 
@@ -82,6 +84,12 @@ DATABASES = {
     }
 }
 
+LOCATION_FIELD = {
+    'provider.google.api': '//maps.google.com/maps/api/js?sensor=false',
+    'provider.google.api_key': 'AIzaSyCuORg0sZFB_hEBVrNPieRnLgqyA8jrlIw',
+    'provider.google.api_libraries': '',
+    'provider.google.map.type': 'ROADMAP',
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
