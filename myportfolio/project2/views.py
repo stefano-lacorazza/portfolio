@@ -16,6 +16,7 @@ def project2(request):
     """
 
     if request.method == "POST":
+        
         # create a form instance and populate it with data from the request:
         form = rentForm(request.POST)
         # check whether it's valid:
@@ -28,7 +29,7 @@ def project2(request):
             apto = pd.DataFrame([[form.cleaned_data.get('city'),form.cleaned_data.get('built_Area'),form.cleaned_data.get('private_Area'),form.cleaned_data.get('stratum'),form.cleaned_data.get('rooms'),form.cleaned_data.get('parking_lots'),form.cleaned_data.get('bathrooms'),form.cleaned_data.get('age'),form.cleaned_data.get('lat'),form.cleaned_data.get('lon')]])
             
             # redirect to a new URL:
-            return render(request, 'Project2\proyect2.html', {"form": 'The predicted rent cost is: $' +str(model_RFR.predict(pd.DataFrame(apto))[0])+' COP'})
+            return render(request, 'Project2\proyect2.html', {"form": form , "prediction": '$' +str(model_RFR.predict(pd.DataFrame(apto))[0])+' COP'})
         HttpResponse(model_RFR.predict(pd.DataFrame(apto)))
 
     form = rentForm()

@@ -49,15 +49,21 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">Why hire me?</a>
+                        <a href="#part1" class="nav-link smoothScroll">Step 1</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#testimonials" class="nav-link smoothScroll">Projects</a>
+                        <a href="#part2" class="nav-link smoothScroll">Step 2</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                        <a href="#part3" class="nav-link smoothScroll">Step 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#part4" class="nav-link smoothScroll">Step 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#final" class="nav-link smoothScroll">Predictor</a>
                     </li>
                 </ul>
 
@@ -71,7 +77,7 @@
 
 
 
-    <section class="about section-padding" id="about">
+    <section class="about section-padding" id="intro">
         <div class="container">
             <div class="row">
 
@@ -86,17 +92,33 @@
                           <li>Web scraping</li>
                           <li>Data analysis</li>
                         </ul></p>
-                        </div>
+
+                    </div>
+
+                    
+            </div>
+
                     <p>When I set out on the daunting task of finding a new apartment to rent in Colombia, I found myself confronted with the challenge of navigating the
                          ever-changing and often unpredictable housing rental market. The quest to find a suitable place that aligns with my budget and 
                          preferences led me to realize that predicting house rent prices is indeed a real-world problem faced by countless individuals.
                           It became evident that an innovative solution was needed to aid not only myself but also others in their pursuit of the perfect rental 
                           accommodation.</p>
                     <p>Inspired by this personal struggle and the desire to help fellow renters, I embarked on a mission to develop a machine learning project aimed 
-                        at predicting house rent prices in Colombia. By leveraging the power data science techniques and the vast troves of rental market data available,
+                        at predicting house rent prices in Colombia. By leveraging the power of data science techniques and the vast troves of rental market data available,
                          this project seeks to bring a new level of efficiency and accuracy to the process of estimating rental costs.  </p>
-                    <h3 class="w3-xlarge">Step 1: Gathering data</h3>
-                    <p>With the vision set, the next step in this project was to gather the data necessary to train the predictive model. To achieve this, I turned to 
+        </div>
+    </div>
+
+    </section>
+
+
+    <section class="about section-padding" id="part1">
+        <div class="container">
+            
+
+                <div class="col-lg-12 col-md-6 col-12">
+                <h3 class="w3-xlarge">Step 1: Gathering data</h3>
+                    <p>With the vision set, the first step in this project was to gather the data necessary to train the predictive model. To achieve this, I turned to 
                         one of Colombia's main rental websites, <a  href='https://www.metrocuadrado.com/' target="_blank"> Metro Cruadrado</a>, a platform known
                          for its vast collection of property listings across the country. Employing web scraping techniques, I embarked on extracting relevant
                           rental information from the website, including property features, location, and corresponding rental prices. By creating a systematic 
@@ -105,6 +127,14 @@
                            for the subsequent phases of the project, where data exploration, preprocessing, and feature engineering would come into play to lay the 
                            groundwork for a powerful and accurate rent price prediction model.</p>
                     <p>You can find the scraping algorithm <a  href="https://github.com/stefano-lacorazza/MetroCuadrado-Scraper" target="_blank"><Strong>here</Strong></a> and <a  href="{% static 'Project2\files/frame.csv' %}" target="_blank"><Strong>here</Strong></a> a sample of the pre-processed data</p>
+                    </div>
+                </section>        
+
+    <section class="about section-padding" id="part2">     
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-6 col-12">  
                     <h3 class="w3-xlarge">Step 2: Cleaning the data</h3>
                     <p>With the dataset in hand, the next phase of the project involved data cleaning and feature identification. To ensure the reliability 
                         and accuracy of our model, it was imperative to address missing values, outliers, and inconsistencies within the data. 
@@ -143,7 +173,13 @@
                                 dataset['Estrato'] = dataset['Estrato'].apply(lambda x: x.replace('Comercial', '0'))
                             </code>
                           </pre>
-                    <h3 class="w3-xlarge">Step 3: Training the model</h3>
+                        </section> 
+                        <div class="container">
+                            <div class="row">
+                
+                                <div class="col-lg-12 col-md-6 col-12">
+                          <h3 class="w3-xlarge">Step 3: Training the model</h3>
+                          
                     <p>With the refined dataset in hand, I proceeded to the phase of training the prediction model. To capture the complexity of the rental market,
                          I explored a diverse set of machine learning algorithms, including linear regression, random forest regression, and Support Vector Machine (SVM).</p>
 
@@ -156,9 +192,13 @@
                         Evaluating the models based on the mean absolute percentage error (MAPE) as the metric, it became evident that the random forest regression with
                          100 estimators consistently yielded the most promising results. Its ability to capture intricate relationships between features and rental prices,
                           along with its resilience to outliers, made it the ideal choice for our rent price prediction model. I was specially satisfied when it accurately
-                           predicted my current apartment’s rent cost with an error of less than 100K COP.
+                           predicted my current apartment’s rent cost with an error of less than 5%.
                         </p>
-                        <h3 class="w3-xlarge">Step 3: Analize results</h3>
+                        <h3 class="w3-xlarge">Step 4: Analize the results</h3>
+                        <div class="container">
+                            <div class="row">
+                
+                                <div class="col-lg-12 col-md-6 col-12">
                     <p>
                         With the model at hand, the final step of the project involved a comprehensive analysis of the results. This analysis aimed to gain deeper
                          insights into the factors driving rent prices in Colombia and to identify the most influential features affecting rental rates.
@@ -182,13 +222,21 @@
                          had the potential to empower individuals in their apartment hunting endeavors. 
                     </p>
                 </div>
-                    
+                <div class="container">
+                    <div class="row">
+        
+                        <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Finished rent price predictor</h3>
+                    <p>
+                        Please input the required information:
+                    </p>
                 <form action="/project2/" method="post">
                     {% csrf_token %}
                     {{ form }}
-                    <input type="submit" value="Submit">
+                    
+                    <input type="submit" value="Predicted rent price">
                 </form>
-              
+                The predicted rent cost for the property is: {{ prediction }}
 
             </div>
             
