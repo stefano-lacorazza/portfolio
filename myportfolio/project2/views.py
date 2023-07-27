@@ -36,5 +36,5 @@ def project2(request):
     context = {
         "key": 0,
     }
-    return render(request, 'Project2\proyect2.html', {"form": form})
+    return render(request, 'Project2\proyect2.html',  {"form": form})
 

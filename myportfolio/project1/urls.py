@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path("", views.project1, name="projec2main"),
+     path("", views.project1, name="project1main"),
    
     
 ]

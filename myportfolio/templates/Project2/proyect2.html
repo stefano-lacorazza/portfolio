@@ -108,7 +108,7 @@
                          this project seeks to bring a new level of efficiency and accuracy to the process of estimating rental costs.  </p>
         </div>
     </div>
-
+    
     </section>
 
 
@@ -116,9 +116,9 @@
         <div class="container">
             
 
-                <div class="col-lg-12 col-md-6 col-12">
-                <h3 class="w3-xlarge">Step 1: Gathering data</h3>
-                    <p>With the vision set, the first step in this project was to gather the data necessary to train the predictive model. To achieve this, I turned to 
+            <div class="col-lg-12 col-md-6 col-12">
+            <h3 class="w3-xlarge">Step 1: Gathering data</h3>
+                <p>With the vision set, the first step in this project was to gather the data necessary to train the predictive model. To achieve this, I turned to 
                         one of Colombia's main rental websites, <a  href='https://www.metrocuadrado.com/' target="_blank"> Metro Cruadrado</a>, a platform known
                          for its vast collection of property listings across the country. Employing web scraping techniques, I embarked on extracting relevant
                           rental information from the website, including property features, location, and corresponding rental prices. By creating a systematic 
@@ -126,7 +126,7 @@
                           involved handling complex data structures and ensuring data integrity. As I successfully compiled this extensive dataset, the stage was set
                            for the subsequent phases of the project, where data exploration, preprocessing, and feature engineering would come into play to lay the 
                            groundwork for a powerful and accurate rent price prediction model.</p>
-                    <p>You can find the scraping algorithm <a  href="https://github.com/stefano-lacorazza/MetroCuadrado-Scraper" target="_blank"><Strong>here</Strong></a> and <a  href="{% static 'Project2\files/frame.csv' %}" target="_blank"><Strong>here</Strong></a> a sample of the pre-processed data</p>
+                <p>You can find the scraping algorithm <a  href="https://github.com/stefano-lacorazza/MetroCuadrado-Scraper" target="_blank"><Strong>here</Strong></a> and <a  href="{% static 'Project2\files/frame.csv' %}" target="_blank"><Strong>here</Strong></a> a sample of the pre-processed data</p>
                     </div>
                 </section>        
 
@@ -174,8 +174,9 @@
                             </code>
                           </pre>
                         </section> 
-                        <div class="container">
-                            <div class="row">
+                        <section class="about section-padding" id="part3">     
+                            <div class="container">
+                                <div class="row">
                 
                                 <div class="col-lg-12 col-md-6 col-12">
                           <h3 class="w3-xlarge">Step 3: Training the model</h3>
@@ -194,6 +195,12 @@
                           along with its resilience to outliers, made it the ideal choice for our rent price prediction model. I was specially satisfied when it accurately
                            predicted my current apartment’s rent cost with an error of less than 5%.
                         </p>
+                    </div></div></div>
+
+                    <section class="about section-padding" id="part4">     
+                        <div class="container">
+                            <div class="row">
+
                         <h3 class="w3-xlarge">Step 4: Analize the results</h3>
                         <div class="container">
                             <div class="row">
@@ -222,6 +229,9 @@
                          had the potential to empower individuals in their apartment hunting endeavors. 
                     </p>
                 </div>
+
+            </div></div></div>
+            <section class="about section-padding" id="final">     
                 <div class="container">
                     <div class="row">
         
@@ -238,85 +248,15 @@
                 </form>
                 The predicted rent cost for the property is: {{ prediction }}
 
-            </div>
+            </div></div></div></div>
             
             </div>
         </div>
     </section>
 
 
-    <!-- Projects -->
-     <section class="testimonials section-padding" id="testimonials">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-12">
-                        <h3 class="mb-5 text-center">Personal Projects</h3>
-
-                        <div class="owl-carousel owl-theme" id="testimonials-carousel">
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{% static 'mainsite/images/Proyects/proyect1.png' %}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Analysis of fuel sells in Colombia</p>
-
-              
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{% static 'mainsite/images/Proyects/proyect2.png' %}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Rent price prediction in Colombia's main cities</p>
-
-                                        
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{% static 'mainsite/images/Proyects/proyect3.png' %}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Word cloud generator from Whatsapp chats</p>
-
-                             
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{% static 'mainsite/images/Proyects/proyect4.png' %}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Proyecto 4</p>
-
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
+    
+</div>
 
 
      <section class="contact section-padding pt-0" id="contact">
