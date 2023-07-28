@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'project1',
     'project2',
     'location_field.apps.DefaultConfig',
-     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'channels',
     'channels_redis',
 
@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_plotly_dash.middleware.BaseMiddleware',
 ]
+
 CHANNEL_LAYERS = {
    'default': { 'BACKEND': 'channels_redis.core.RedisChannelLayer',
                 'CONFIG': {
@@ -142,21 +143,13 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
    
 ]
-STATICFILES_FINDERS = [
-    ...,
-    'django_plotly_dash.finders.DashAssetFinder',
-    'django_plotly_dash.finders.DashComponentFinder'
-]
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-PLOTLY_COMPONENTS = [
-    'dash_core_components',
-    'dash_html_components',
-    'dash_renderer',
-    'dpd_components']
 
 #Add X_FRAME_OPTIONS = 'SAMEORIGIN' to settings.py to enable frames within HTML documents
 X_FRAME_OPTIONS = 'SAMEORIGIN'

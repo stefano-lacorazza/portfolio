@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% load static %}
+  
 <head>
 
      <title>Stefano's Portfolio - Profile HTML Page</title>
@@ -171,49 +172,35 @@
 
 
                     <p>My aspiration for this interactive data visualization platform is to not only offer a visually engaging experience but also to provide a valuable resource for policymakers, energy analysts, and stakeholders alike. By granting users the ability to switch between Heatmaps, Bubble Maps, and Choropleth Maps, I hope to foster data-driven decision-making, spark conversations, and contribute to a sustainable and efficient energy landscape for Colombia's future.</p>
+                   
+
+                    
+                
                 </div>
 
 
             
             </div>
+            <style>
+                #container_iframe div{
+                    height: 900px!important  ;
+                }
+            </style>
+    {%load plotly_dash  %}
+    <div id="container_iframe">
+    {%plotly_app name="SimpleExample" %}
+</div>
         </div>
+        
     </section>
 
-
+ 
     
 </div>
 
 
-     <section class="contact section-padding pt-0" id="contact">
-      <div class="container">
-        <div class="row">
 
-          </div>
 
-            <div class="mx-auto col-lg-4 col-md-6 col-12">
-                <h3 class="my-4 pt-4 pt-lg-0">Contact me</h3>
-
-                <p class="mb-1">+57 3112873140</p>
-
-                <p>
-                    <a href="mailto: stefano.lacorazza@gmail.com" >
-                        Stefano.lacorazza@gmail.com
-                    <i class="fas fa-arrow-right custom-icon"></i>
-                    </a>
-                </p>
-
-                <ul class="social-links mt-2">
-                    <li><a href="https://www.facebook.com/stefano.lacorazza" rel="noopener" class="fa fa-facebook"></a></li>
-                    <li><a href="https://www.linkedin.com/in/stefano-lacorazza/" rel="noopener" class="fa fa-linkedin"></a></li>
-                    <li><a href="https://github.com/stefano-lacorazza" rel="noopener" class="fa fa-github"></a></li>
-                    
-                </ul>
-        
-            </div>
-
-        </div>
-      </div>
-    </section>
      <!-- SCRIPTS -->
      <script src="{% static 'mainsite/js/jquery.min.js' %}"></script>
      <script src="{% static 'mainsite/js/bootstrap.min.js' %}"></script>

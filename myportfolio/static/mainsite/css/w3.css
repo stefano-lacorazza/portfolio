@@ -239,3 +239,5 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   margin-right: auto;
   width: 50%;
 }
+.dash-app{height: 1000px;}
+.container_iframe{height: 1000px!important}

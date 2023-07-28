@@ -4,6 +4,8 @@ import pickle
 import os
 import pandas as pd
 from django.http import HttpResponse
+from dash import Dash, html, dcc
+from . import plotly_app
 # Create your views here.
 def project1(request):
     """_summary_
