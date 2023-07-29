@@ -35,7 +35,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                 Project2
+                 Project 3
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,15 +82,14 @@
             <div class="row">
 
                 <div class="col-lg-12 col-md-6 col-12">
-                    <h3 class="mb-4">Machine learning based rent predictor in Colombia</h3>
+                    <h3 class="mb-4">Word cloud generator from Whatsapp chat</h3>
                     <div class="col-lg-4 col-md-4 col-12">
                         <h3>Showcased Skills</h3>
                         <p><ul>
                           <li>Python</li>
-                          <li>Machine learning</li>
-                          <li>Statistics and probability</li>
-                          <li>Web scraping</li>
-                          <li>Data analysis</li>
+                          <li>Data processing</li>
+                          <li>Natural Language Processing (NLP)</li>
+                          <li>Data Visualization</li>
                         </ul></p>
 
                     </div>
@@ -98,14 +97,8 @@
                     
             </div>
 
-                    <p>When I set out on the daunting task of finding a new apartment to rent in Colombia, I found myself confronted with the challenge of navigating the
-                         ever-changing and often unpredictable housing rental market. The quest to find a suitable place that aligns with my budget and 
-                         preferences led me to realize that predicting house rent prices is indeed a real-world problem faced by countless individuals.
-                          It became evident that an innovative solution was needed to aid not only myself but also others in their pursuit of the perfect rental 
-                          accommodation.</p>
-                    <p>Inspired by this personal struggle and the desire to help fellow renters, I embarked on a mission to develop a machine learning project aimed 
-                        at predicting house rent prices in Colombia. By leveraging the power of data science techniques and the vast troves of rental market data available,
-                         this project seeks to bring a new level of efficiency and accuracy to the process of estimating rental costs.  </p>
+                    <p>As a data enthusiast with a deep passion for exploring the hidden insights within text data, I embarked on a captivating personal project that started as a simple curiosity - creating a word cloud from the chat conversations with my wife. Little did I know that this initial experiment would lead to an exciting online tool that empowers people to delve into the essence of their conversations through data science. The journey of turning a whimsical idea into a practical application has been both rewarding and enlightening, and I am thrilled to share the story of this transformative project.</p>
+                    <p>The idea to create a word cloud of our chat conversations with my wife sparked during a nostalgic moment when I was scrolling through our messages and reminiscing about the beautiful memories we've shared over the years. I realized that visualizing our most frequently used words could capture the essence of our relationship in a unique and artistic manner. So, I decided to experiment with Python's powerful libraries, such as NLTK and WordCloud, to craft a captivating word cloud that showcased the words that resonated most with us.</p>
         </div>
     </div>
     
@@ -118,15 +111,7 @@
 
             <div class="col-lg-12 col-md-6 col-12">
             <h3 class="w3-xlarge">Step 1: Gathering data</h3>
-                <p>With the vision set, the first step in this project was to gather the data necessary to train the predictive model. To achieve this, I turned to 
-                        one of Colombia's main rental websites, <a  href='https://www.metrocuadrado.com/' target="_blank"> Metro Cruadrado</a>, a platform known
-                         for its vast collection of property listings across the country. Employing web scraping techniques, I embarked on extracting relevant
-                          rental information from the website, including property features, location, and corresponding rental prices. By creating a systematic 
-                          database from this trove of data, I aimed to build a robust foundation for training the machine learning model. The web scraping process 
-                          involved handling complex data structures and ensuring data integrity. As I successfully compiled this extensive dataset, the stage was set
-                           for the subsequent phases of the project, where data exploration, preprocessing, and feature engineering would come into play to lay the 
-                           groundwork for a powerful and accurate rent price prediction model.</p>
-                <p>You can find the scraping algorithm <a  href="https://github.com/stefano-lacorazza/MetroCuadrado-Scraper" target="_blank"><Strong>here</Strong></a> and <a  href="{% static 'Project2\files/frame.csv' %}" target="_blank"><Strong>here</Strong></a> a sample of the pre-processed data</p>
+                <p>With the vi a sample of the pre-processed data</p>
                     </div>
                 </section>        
 
@@ -136,43 +121,9 @@
 
                 <div class="col-lg-12 col-md-6 col-12">  
                     <h3 class="w3-xlarge">Step 2: Cleaning the data</h3>
-                    <p>With the dataset in hand, the next phase of the project involved data cleaning and feature identification. To ensure the reliability 
-                        and accuracy of our model, it was imperative to address missing values, outliers, and inconsistencies within the data. 
-                        During this process, I focused on identifying key features that significantly influence rent prices. City and location data were paramount, as 
-                        they played a vital role in capturing regional variations and urban dynamics. </p>
-                    <p>Furthermore, attributes like the number of rooms, bathrooms, and
-                         property area emerged as essential indicators of rental prices, offering valuable insights into the housing supply and demand dynamics.
-                          Additionally, I considered the antiquity of properties as a crucial feature, as older buildings might have distinct rental pricing patterns
-                           compared to newer developments.</p>
-                    <p>Through data exploration and feature engineering, I curated a dataset with informative attributes that were ready for 
-                        the subsequent stages of model training and evaluation. Armed with this comprehensive and cleaned data, I was eager to delve into the realm 
-                        of machine learning algorithms to create a powerful rent price prediction model.
-                        </p>
-                        <p>
-                            Here you can see the code used to clean and prepare the data:
-                        </p>
-                        <pre>
-                            <code>
-                                dataset = pd.read_csv("files/frame.csv")
-                                dataset = dataset.drop(columns = [ 'Barrio', 'Unnamed: 0', 'Codigo Web', 'Titulo', 'Barrio Catastral','Precio venta', 
-                                'Zona', 'Sector','Interior', 'Exterior',  'Direccion', 'Url'])
-                                dataset = dataset.drop([0])
-                                dataset['Long'] = dataset['Long'].replace([0],[np.nan])
-                                dataset['Lat'] = dataset['Lat'].replace([0],[np.nan])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Más de 20 años'],[25])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 5 y 10 años'],[7])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 10 y 20 años'],[15])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 0 y 5 años'],[2])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Entre 10 y 20 año'],[15])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace(['Remodelado'],[0])
-                                dataset['Antiguedad'] = dataset['Antiguedad'].replace([np.nan],[0])
-                                dataset = dataset.dropna()
-                                dataset['Precio arriendo'] = dataset['Precio arriendo'].apply(lambda x: x.replace('$', ''))
-                                dataset['Precio arriendo'] = dataset['Precio arriendo'].apply(lambda x: x.replace('.', ''))
-                                dataset['Ciudad'] = dataset['Ciudad'].apply(lambda x: city_cleaner(x))
-                                dataset['Estrato'] = dataset['Estrato'].apply(lambda x: x.replace('Comercial', '0'))
-                            </code>
-                          </pre>
+                    <p>With the dataset in ynamics. </p>
+                    
+                       
                         </section> 
                         <section class="about section-padding" id="part3">     
                             <div class="container">
@@ -181,20 +132,8 @@
                                 <div class="col-lg-12 col-md-6 col-12">
                           <h3 class="w3-xlarge">Step 3: Training the model</h3>
                           
-                    <p>With the refined dataset in hand, I proceeded to the phase of training the prediction model. To capture the complexity of the rental market,
-                         I explored a diverse set of machine learning algorithms, including linear regression, random forest regression, and Support Vector Machine (SVM).</p>
+                    <p>With the refined dataset in hand, I (SVM).</p>
 
-                    <p>Starting with linear regression, it provided a baseline understanding of the data's linear relationships but showed limitations in capturing
-                         the non-linear complexities prevalent in the rental market. SVM exhibited better performance by finding optimal hyperplanes in high-dimensional
-                          spaces, but it was not as effective.</p>
-                        
-                    <p>The breakthrough came with the random forest regression, which demonstrated remarkable adaptability to the data's non-linear patterns and 
-                        robustness against overfitting. By aggregating the predictions of multiple decision trees, this ensemble model outperformed the others in accuracy.
-                        Evaluating the models based on the mean absolute percentage error (MAPE) as the metric, it became evident that the random forest regression with
-                         100 estimators consistently yielded the most promising results. Its ability to capture intricate relationships between features and rental prices,
-                          along with its resilience to outliers, made it the ideal choice for our rent price prediction model. I was specially satisfied when it accurately
-                           predicted my current apartment’s rent cost with an error of less than 5%.
-                        </p>
                     </div></div></div>
 
                     <section class="about section-padding" id="part4">     
@@ -207,27 +146,9 @@
                 
                                 <div class="col-lg-12 col-md-6 col-12">
                     <p>
-                        With the model at hand, the final step of the project involved a comprehensive analysis of the results. This analysis aimed to gain deeper
-                         insights into the factors driving rent prices in Colombia and to identify the most influential features affecting rental rates.
+                        With the modecting rental rates.
                     </p>
-                    <p><img src="{% static 'Project2\images\weight_chart.png' %}" style="float: right;width:500px;height:400px;margin-left:15px;">
-                        Upon close examination of the model's output, it became evident that the area of the property emerged as the most critical determinant of 
-                        rent prices. Larger properties tended to command higher rents, which wasn’t all that surprising.
-                        Following closely in significance were the location and antiquity of the property. The model highlighted the strong impact of location on rental
-                         prices, with properties situated in prime neighborhoods commanding premium rates, a characteristic well known in Colombia’s house market. 
-                         Moreover, the antiquity of a property played a substantial role in shaping rent prices, with newer buildings often fetching higher rents
-                          compared to older counterparts.    
-                    </p>
-                    <p>
-                        This in-depth analysis not only validated the effectiveness of the random forest regression model but also shed light on the underlying dynamics 
-                        of Colombia's rental market. By understanding the most crucial factors driving rent prices, this model could serve as a powerful tool for 
-                        both renters and landlords to make informed decisions in their rental transactions.
-                    </p>
-                    <p>
-                        As this project came to a close, I felt a sense of pride and accomplishment in developing a machine learning solution that could potentially 
-                        help the way people search for rental properties in Colombia. The combination of accurate predictions and valuable insights into key features
-                         had the potential to empower individuals in their apartment hunting endeavors. 
-                    </p>
+                    
                 </div>
 
             </div></div></div>
@@ -240,13 +161,16 @@
                     <p>
                         Please input the required information:
                     </p>
-                <form action="/project2/" method="post">
+                <form action="{% url 'project3main' %}" method="post">
                     {% csrf_token %}
                     {{ form }}
+
                     
-                    <input type="submit" value="Predicted rent price">
+                    <input type="submit" value="Submit">
+                    
                 </form>
-                The predicted rent cost for the property is: {{ prediction }}
+                {{ data|safe }}
+                <img src="data:image/png;base64,{{ data }}" alt="" height="250" ,width="250">
 
             </div></div></div></div>
             

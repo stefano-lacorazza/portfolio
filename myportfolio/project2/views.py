@@ -6,14 +6,7 @@ import pandas as pd
 from django.http import HttpResponse
 # Create your views here.
 def project2(request):
-    """_summary_
 
-    Args:
-        request (_type_): _description_
-
-    Returns:
-        _type_: _description_
-    """
 
     if request.method == "POST":
         
