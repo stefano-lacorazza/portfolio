@@ -34,9 +34,9 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
 
-            <a class="navbar-brand" href="#">
-                 Project 3
-            </a>
+            <a class="navbar-brand" href='{% url "index" %}'>
+                Portfolio Stefano Lacorazza
+           </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -67,9 +67,7 @@
                     </li>
                 </ul>
 
-                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="{% static 'mainsite/Files/MyResume.pdf' %}" class="custom-btn btn" download="CV">Download CV</a>
-                </div>
+
             </div>
 
         </div>
@@ -157,10 +155,8 @@
                     <div class="row">
         
                         <div class="col-lg-12 col-md-6 col-12">
-                    <h3 class="w3-xlarge">Finished rent price predictor</h3>
-                    <p>
-                        Please input the required information:
-                    </p>
+                    <h3 class="w3-xlarge">Finished word cloud generator</h3>
+                 
                 <form action='{% url "project3main" %}' method="POST">
                     {% csrf_token %}
                     {{ form }}

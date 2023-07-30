@@ -35,8 +35,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
 
-            <a class="navbar-brand" href="#">
-                 Project 1
+            <a class="navbar-brand" href='{% url "index" %}'>
+                 Portfolio Stefano Lacorazza
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,14 +63,9 @@
                     <li class="nav-item">
                         <a href="#part4" class="nav-link smoothScroll">Step 4</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#final" class="nav-link smoothScroll">Predictor</a>
-                    </li>
+                    
                 </ul>
 
-                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="{% static 'mainsite/Files/MyResume.pdf' %}" class="custom-btn btn" download="CV">Download CV</a>
-                </div>
             </div>
 
         </div>
@@ -181,6 +176,9 @@
 
             
             </div>
+
+        
+             
             <style>
                 #container_iframe div{
                     height: 900px!important  ;
