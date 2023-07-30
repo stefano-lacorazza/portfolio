@@ -8,6 +8,7 @@ from django.http import HttpResponse
 
 def project3(request):
 
+
     if request.method == "POST":
         
         # create a form instance and populate it with data from the request:
@@ -34,10 +35,12 @@ def project3(request):
             response = HttpResponse(content_type = 'image/png')
             canvas = FigureCanvasAgg(fig)
             canvas.print_png(response)
+            print('yes')
             return render(request, 'Project2\proyect2.html',  {"form": form})
         
     form = fileForm()
     context = {
         "key": 0,
     }
+    print('no')
     return render(request, 'Project3\proyect3.html',  {"form": form})

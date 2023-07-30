@@ -161,12 +161,12 @@
                     <p>
                         Please input the required information:
                     </p>
-                <form action="{% url 'project3main' %}" method="post">
+                <form action='{% url "project3main" %}' method="POST">
                     {% csrf_token %}
                     {{ form }}
 
                     
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" Name="FF">
                     
                 </form>
                 {{ data|safe }}
