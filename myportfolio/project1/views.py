@@ -38,4 +38,4 @@ def project1(request):
     # context = {
     #     "key": 0,
     # }
-    return render(request, 'Project1\proyect1.html')
+    return render(request, 'Project1/proyect1.html')

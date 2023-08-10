@@ -36,11 +36,11 @@ def project3(request):
             canvas = FigureCanvasAgg(fig)
             canvas.print_png(response)
             print('yes')
-            return render(request, 'Project2\proyect2.html',  {"form": form})
+            return render(request, 'Project2/proyect2.html',  {"form": form})
         
     form = fileForm()
     context = {
         "key": 0,
     }
     print('no')
-    return render(request, 'Project3\proyect3.html',  {"form": form})
+    return render(request, 'Project3/proyect3.html',  {"form": form})
