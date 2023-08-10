@@ -10,7 +10,7 @@ def index(request):
     context = {
         "key": 0,
     }
-    return render(request, 'mainsite\index.html', context)
+    return render(request, 'mainsite/index.html', context)
 
 
 def proyect1(request):
@@ -19,14 +19,14 @@ def proyect1(request):
     context = {
         "key": 0,
     }
-    return render(request, 'mainsite\proyect1.html', context)
+    return render(request, 'mainsite/proyect1.html', context)
 def proyect2(request):
   
 
     context = {
         "key": 0,
     }
-    return render(request, 'mainsite\proyect1.html', context)
+    return render(request, 'mainsite/proyect2.html', context)
 
 
 
@@ -36,4 +36,4 @@ def proyect3(request):
     context = {
         "key": 0,
     }
-    return render(request, 'mainsite\proyect3.html', context)
+    return render(request, 'mainsite/proyect3.html', context)
