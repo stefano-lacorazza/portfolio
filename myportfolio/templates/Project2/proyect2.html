@@ -238,8 +238,9 @@
                     <p>
                         Please input the required information:
                     </p>
+                    {% load crispy_forms_tags %}
                 <form action="/project2/" method="post">
-                    {% csrf_token %}
+                    {% csrf_token |crispy%}
                     {{ form }}
                     
                     <input type="submit" value="Predicted rent price">
