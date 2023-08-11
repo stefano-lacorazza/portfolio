@@ -244,7 +244,7 @@
                 <form action="/project2/" method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    
+                    <button type="submit">Submit</button>
                     <input type="submit" value="Predicted rent price">
                 </form>
                 The predicted rent cost for the property is: {{ prediction }}
