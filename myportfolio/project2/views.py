@@ -17,7 +17,8 @@ def project2(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             model_path = os.path.join(os.path.dirname(__file__), 'rent_predictor_model.pkl')
-            address = (form.cleaned_data.get('address'+'%20'+form.cleaned_data.get('city'))).replace(' ','%20').replace('#','%23')
+            address1 = form.cleaned_data.get('address')+'%20'+form.cleaned_data.get('city')
+            address = address1.replace(' ','%20').replace('#','%23')
             api_key = 'AIzaSyB7ll_7odkimkj8vly0VIt-Dol9useuv5Q'
             
             api_response = requests.get(
@@ -27,7 +28,7 @@ def project2(request):
             if api_response_dict['status'] == 'OK':
                 latitude = api_response_dict['results'][0]['geometry']['location']['lat']
                 longitude = api_response_dict['results'][0]['geometry']['location']['lng']
-                HttpResponse(''.join(latitude).join(' ').join(longitude))
+                
             with open(model_path, 'rb') as model_file:
                 model_RFR = pickle.load(model_file)
             apto = pd.DataFrame([[form.cleaned_data.get('city'), form.cleaned_data.get('built_Area'), 
