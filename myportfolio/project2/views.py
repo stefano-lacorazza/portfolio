@@ -17,7 +17,7 @@ def project2(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             model_path = os.path.join(os.path.dirname(__file__), 'rent_predictor_model.pkl')
-            address = form.cleaned_data.get('address').join('%20').join(form.cleaned_data.get('city')).replace(' ','%20').replace('#','%23')
+            address = (form.cleaned_data.get('address'+'%20'+form.cleaned_data.get('city'))).replace(' ','%20').replace('#','%23')
             api_key = 'AIzaSyB7ll_7odkimkj8vly0VIt-Dol9useuv5Q'
             
             api_response = requests.get(
@@ -30,8 +30,11 @@ def project2(request):
                 HttpResponse(''.join(latitude).join(' ').join(longitude))
             with open(model_path, 'rb') as model_file:
                 model_RFR = pickle.load(model_file)
-            apto = pd.DataFrame([[form.cleaned_data.get('city'),form.cleaned_data.get('built_Area'),form.cleaned_data.get('private_Area'),form.cleaned_data.get('stratum'),form.cleaned_data.get('rooms'),form.cleaned_data.get('parking_lots'),form.cleaned_data.get('bathrooms'),form.cleaned_data.get('age'),str(latitude),str(longitude)]])
-            
+            apto = pd.DataFrame([[form.cleaned_data.get('city'), form.cleaned_data.get('built_Area'), 
+                                  form.cleaned_data.get('private_Area'), form.cleaned_data.get('stratum'), 
+                                  form.cleaned_data.get('rooms'), form.cleaned_data.get('parking_lots'), 
+                                  form.cleaned_data.get('bathrooms'), form.cleaned_data.get('age'), str(latitude), str(longitude)]])
+
             
             # redirect to a new URL:
             return render(request, 'Project2/proyect2.html', {"form": form , "prediction": '$' +str(model_RFR.predict(pd.DataFrame(apto))[0])+' COP'})
