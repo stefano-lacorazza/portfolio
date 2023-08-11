@@ -30,7 +30,8 @@ def project2(request):
                 HttpResponse(''.join(latitude).join(' ').join(longitude))
             with open(model_path, 'rb') as model_file:
                 model_RFR = pickle.load(model_file)
-            apto = pd.DataFrame([[form.cleaned_data.get('city'),form.cleaned_data.get('built_Area'),form.cleaned_data.get('private_Area'),form.cleaned_data.get('stratum'),form.cleaned_data.get('rooms'),form.cleaned_data.get('parking_lots'),form.cleaned_data.get('bathrooms'),form.cleaned_data.get('age'),latitude,longitude]])
+            apto = pd.DataFrame([[form.cleaned_data.get('city'),form.cleaned_data.get('built_Area'),form.cleaned_data.get('private_Area'),form.cleaned_data.get('stratum'),form.cleaned_data.get('rooms'),form.cleaned_data.get('parking_lots'),form.cleaned_data.get('bathrooms'),form.cleaned_data.get('age'),str(latitude),str(longitude)]])
+            
             
             # redirect to a new URL:
             return render(request, 'Project2/proyect2.html', {"form": form , "prediction": '$' +str(model_RFR.predict(pd.DataFrame(apto))[0])+' COP'})
