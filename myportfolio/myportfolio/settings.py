@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_plotly_dash.middleware.BaseMiddleware',
 ]
-
+CRISPY_TEMPLATE_PACK = 'uni_form'
 CHANNEL_LAYERS = {
    'default': { 'BACKEND': 'channels_redis.core.RedisChannelLayer',
                 'CONFIG': {
