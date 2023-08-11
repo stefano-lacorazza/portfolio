@@ -17,9 +17,9 @@ def project2(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             model_path = os.path.join(os.path.dirname(__file__), 'rent_predictor_model.pkl')
-            address = form.cleaned_data.get('address').join(', ').join(form.cleaned_data.get('city'))
-            api_key = 'AIzaSyCuORg0sZFB_hEBVrNPieRnLgqyA8jrlIw'
-
+            address = form.cleaned_data.get('address').join('%20').join(form.cleaned_data.get('city')).replace(' ','%20').replace('#','%23')
+            api_key = 'AIzaSyB7ll_7odkimkj8vly0VIt-Dol9useuv5Q'
+            
             api_response = requests.get(
             'https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(address, api_key))
             api_response_dict = api_response.json()
