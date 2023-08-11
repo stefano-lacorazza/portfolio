@@ -244,10 +244,10 @@
                 <form action="/project2/" method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button type="submit">Submit</button>
-                    <input type="submit" value="Predicted rent price">
+                    
+                    <input type="submit" value="Predict rent price">
                 </form>
-                The predicted rent cost for the property is: {{ prediction }}
+                The predicted rent cost for the property is: <b>{{ prediction }}</b>
 
             </div></div></div></div>
             
@@ -280,7 +280,7 @@
 
                 <ul class="social-links mt-2">
                     <li><a href="https://www.facebook.com/stefano.lacorazza" rel="noopener" class="fa fa-facebook"></a></li>
-                    <li><a href="https://www.linkedin.com/in/stefano-lacorazza/" rel="noopener" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://www.linkedin.com/in/stefano-lacorazza-data-science/" rel="noopener" class="fa fa-linkedin"></a></li>
                     <li><a href="https://github.com/stefano-lacorazza" rel="noopener" class="fa fa-github"></a></li>
                     
                 </ul>
