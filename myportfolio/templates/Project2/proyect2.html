@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% load static %}
+  {% load crispy_forms_tags %}
 <head>
 
      <title>Stefano's Portfolio - Profile HTML Page</title>
@@ -238,10 +239,11 @@
                     <p>
                         Please input the required information:
                     </p>
-                    {% load crispy_forms_tags %}
+
+                    
                 <form action="/project2/" method="post">
-                    {% csrf_token |crispy%}
-                    {{ form }}
+                    {% csrf_token %}
+                    {{ form|crispy }}
                     
                     <input type="submit" value="Predicted rent price">
                 </form>

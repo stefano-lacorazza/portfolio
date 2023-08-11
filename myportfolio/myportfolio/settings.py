@@ -47,6 +47,8 @@ INSTALLED_APPS = [
 
 ]
 
+CRISPY_TEMPLATE_PACK = 'uni_form'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_plotly_dash.middleware.BaseMiddleware',
 ]
-CRISPY_TEMPLATE_PACK = 'uni_form'
+
 CHANNEL_LAYERS = {
    'default': { 'BACKEND': 'channels_redis.core.RedisChannelLayer',
                 'CONFIG': {
