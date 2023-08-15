@@ -12,15 +12,15 @@ import plotly.express as px
 import pandas as pd
 import geopandas as gpd
 import urllib.request, json 
-app = DjangoDash('SimpleExample')   # replaces dash.Dash
+app = DjangoDash('Fuel_visualization')   # replaces dash.Dash
 
 app.layout = html.Div(
     [
         html.H4("Gas"),
         html.P(
-            "The scatter_geo graph is a type of data visualization that displays individual data points on a geographic map. It helps to visually represent the relationship or distribution of data across different locations, providing insights into spatial patterns and correlations. "
-            "The density_mapbox is  used for creating density heatmaps on Mapbox maps. It allows you to visualize the density of data points across a geographic area by aggregating data and representing it with color intensity. "
-            "The Choropleth Map is a type of data visualization that represents data using different colors or patterns on a geographic map. It is used to display spatial variations of a specific variable across different regions, such as countries, states, or administrative districts."
+            "<p> The scatter_geo graph is a type of data visualization that displays individual data points on a geographic map. It helps to visually represent the relationship or distribution of data across different locations, providing insights into spatial patterns and correlations </p> "
+            "<p>The density_mapbox is  used for creating density heatmaps on Mapbox maps. It allows you to visualize the density of data points across a geographic area by aggregating data and representing it with color intensity.</p> "
+            "<p>The Choropleth Map is a type of data visualization that represents data using different colors or patterns on a geographic map. It is used to display spatial variations of a specific variable across different regions, such as countries, states, or administrative districts.</p>"
         ),
         html.P(
             "Enter the type of graph you want to plot:"
