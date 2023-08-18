@@ -46,11 +46,12 @@ INSTALLED_APPS = [
     'channels',
     'channels_redis',
     'crispy_forms',
+    "crispy_bootstrap3",
     
 ]
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'uni_form'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap3"
 
-CRISPY_TEMPLATE_PACK = 'uni_form'
+CRISPY_TEMPLATE_PACK = "bootstrap3"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
