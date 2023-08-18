@@ -39,12 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'project1',
     'project2',
+    'project3',
+    'project4',
     'location_field.apps.DefaultConfig',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'channels',
     'channels_redis',
     'crispy_forms',
-    'crispy_bootstrap4',
+    
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -58,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_plotly_dash.middleware.BaseMiddleware',
+    'crispy_bootstrap4',
 ]
 
 CHANNEL_LAYERS = {
