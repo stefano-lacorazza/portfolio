@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+
+     <title>Stefano's Portfolio - Profile HTML Page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'mainsite/favicon/apple-touch-icon.png' %}">
+     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'mainsite/favicon/favicon-32x32.png' %}">
+     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'mainsite/favicon/favicon-16x16.png' %}">
+     <link rel="manifest" href="{% static 'mainsite/favicon/site.webmanifest' %}">
+     
+     <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.carousel.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.theme.default.min.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="{% static 'mainsite/css/w3.css' %}">
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'mainsite/css/tooplate-ben-resume-style.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href='{% url "index" %}'>
+                Portfolio Stefano Lacorazza
+           </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#intro" class="nav-link smoothScroll">Introduction</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#part1" class="nav-link smoothScroll">Step 1</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#part2" class="nav-link smoothScroll">Step 2</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#part3" class="nav-link smoothScroll">Step 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#part4" class="nav-link smoothScroll">Step 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#final" class="nav-link smoothScroll">Predictor</a>
+                    </li>
+                </ul>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <section class="about section-padding" id="intro">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="mb-4">QR code detector using Machine Learning</h3>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <h3>Showcased Skills</h3>
+                        <p><ul>
+                          <li>Python</li>
+                          <li>Data processing</li>
+                          <li>Machine Learning</li>
+                          <li>Deep Learning</li>
+                        </ul></p>
+
+                    </div>
+
+                    
+            </div>
+
+                    <p>This project started as a tecnical challenge by well-regarded digital solutions company. At first, it was a bit overwhelming, and
+                         I didn't know where to begin. So, I decided to look up information online to get a better idea of how to tackle this challenge.
+
+                        I searched the internet to find articles, papers, and tutorials related to QR code detection. 
+                        As I learned more, I realized that I needed to create a step-by-step plan to solve the QR code detection puzzle. This plan
+                         would involve using algorithms and models to process images and locate QR codes.
+                        </p>
+
+                    
+        </div>
+    </div>
+    
+    </section>
+
+
+    <section class="about section-padding" id="part1">
+        <div class="container">
+            
+
+            <div class="col-lg-12 col-md-6 col-12">
+            <h3 class="w3-xlarge">Step 1: Data Collection:</h3>
+                <p>The project commenced with the intriguing task of gathering QR code images from the vast expanse of the internet. 
+                    Additionally, I reached out to friends, urging them to contribute any QR images they might have. This collaborative 
+                    data collection process laid the foundation for a diverse and comprehensive dataset.</p>
+                    <p>The initial database contained just 50 images, each hosting QR codes in different orientations—a modest yet promising beginning.</p>
+                    You can find here the first batch of images.</p>
+                    <p>These images served as the project's foundation, showcasing QR codes in various contexts. With this 
+                        starting point, I was ready to move on to preprocessing, feature extraction, and model selection, each step 
+                        building the ultimate objective of a robust QR extractor application.</p>
+            </div>
+        </div>
+    </section>        
+
+    <section class="about section-padding" id="part2">     
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-6 col-12">  
+                    <h3 class="w3-xlarge">Step 2: Preprocessing</h3>
+                    <p>My initial approach was to harness the capabilities of the OpenCV library, a versatile tool renowned in
+                         the area of computer vision. The initial steps involved applying Gaussian blur to refine image quality by 
+                         mitigating noise and imperfections. Subsequently, grayscale conversion simplified visual complexity, enhancing
+                          QR code prominence against diverse backgrounds.</p>
+                    <p>Aiming for consistency, images underwent rescaling to a standardized dimension, aligning disparate sizes for
+                         uniformity. Further optimization took form through pixel binarization, where pixels were transformed into
+                         binary values using a threshold, accentuating QR code edges. As these preprocessing layers converged, 
+                         I approached feature extraction with confidence of my efforts.</p>
+                    <p>However, in the subsequent phase, a remarkable discovery reshaped my trajectory. An online tool that 
+                        streamlined preprocessing effortlessly. This tool seamlessly integrated into the process, rendering my 
+                        OpenCV endeavors as just a valuable learning experience.</p>
+                        
+                </div> 
+            </div>
+        </div>     
+    </section> 
+
+    <section class="about section-padding" id="part3">     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Step 3: Feature Extraction</h3>
+                          
+                    <p>Upon entering the task of feature extraction, a clear step emerged: the need to capture the x and y coordinates
+                         of each corner for each QR code across the 50 images. This task appeared time-intensive and potentially 
+                         deadline-threatening. In search of solutions, the internet led me to Roboflow—an online tool that seamlessly 
+                         streamlined the process. This discovery rendered my earlier OpenCV efforts redundant, as Roboflow effortlessly
+                          handled image preprocessing and automated dataset separation into training, validation, and testing.</p>
+                        
+                          <p> As I uploaded the images in roboflow’s dashboard, the process of labeling and annotating them became a
+                            fluid process. With a drag of the mouse, rectangles could be drawn around the QR codes, and the 
+                            corresponding coordinates were automatically captured and compiled into an exportable text file. 
+                            This facilitated the extraction of vital data, necessary for the training of future models. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section-padding" id="part4">     
+                        <div class="container">
+                            <div class="row">
+
+                        <h3 class="w3-xlarge">Step 4: Analize the results</h3>
+                        <div class="container">
+                            <div class="row">
+                
+                                <div class="col-lg-12 col-md-6 col-12">
+                    <p>
+                        With the modecting rental rates.
+                    </p>
+                    
+                </div>
+
+            </div></div></div>
+            <section class="about section-padding" id="final">     
+                <div class="container">
+                    <div class="row">
+        
+                        <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Finished word cloud generator</h3>
+                 
+                <form action='{% url "project3main" %}' method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+
+                    
+                    <input type="submit" value="Submit">
+                    
+                </form>
+                {{ data|safe }}
+                <img src="data:image/png;base64,{{ data }}" alt="" height="250" ,width="250">
+
+            </div></div></div></div>
+            
+            </div>
+        </div>
+    </section>
+
+
+    
+</div>
+
+
+     <section class="contact section-padding pt-0" id="contact">
+      <div class="container">
+        <div class="row">
+
+          </div>
+
+            <div class="mx-auto col-lg-4 col-md-6 col-12">
+                <h3 class="my-4 pt-4 pt-lg-0">Contact me</h3>
+
+                <p class="mb-1">+57 3112873140</p>
+
+                <p>
+                    <a href="mailto: stefano.lacorazza@gmail.com" >
+                        Stefano.lacorazza@gmail.com
+                    <i class="fas fa-arrow-right custom-icon"></i>
+                    </a>
+                </p>
+
+                <ul class="social-links mt-2">
+                    <li><a href="https://www.facebook.com/stefano.lacorazza" rel="noopener" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.linkedin.com/in/stefano-lacorazza/" rel="noopener" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://github.com/stefano-lacorazza" rel="noopener" class="fa fa-github"></a></li>
+                    
+                </ul>
+        
+            </div>
+
+        </div>
+      </div>
+    </section>
+     <!-- SCRIPTS -->
+     <script src="{% static 'mainsite/js/jquery.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/smoothscroll.js' %}"></script>
+     <script src="{% static 'mainsite/js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/custom.js' %}"></script>
+     
+
+</body>
+</html>
