@@ -39,19 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'project1',
     'project2',
-    'project3',
-    'project4',
     'location_field.apps.DefaultConfig',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'channels',
     'channels_redis',
     'crispy_forms',
-    "crispy_bootstrap3",
+    "crispy_bootstrap4",
     
 ]
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap3"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
-CRISPY_TEMPLATE_PACK = "bootstrap3"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
