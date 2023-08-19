@@ -173,26 +173,101 @@
     </section>
 
     <section class="about section-padding" id="part4">     
-                        <div class="container">
-                            <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Step 4: Model Selection</h3>
 
-                        <h3 class="w3-xlarge">Step 4: Analize the results</h3>
-                        <div class="container">
-                            <div class="row">
-                
-                                <div class="col-lg-12 col-md-6 col-12">
-                    <p>
-                        With the modecting rental rates.
-                    </p>
-                    
+                               
+                        <p>
+                            In the pursuit of identifying the most suitable model for the QR code extraction task, an exploratory 
+                            journey unfolded. As I researched academic papers, articles, and discussions CNNs, with their deep 
+                            hierarchical architectures, offered potential but appeared relatively complex for this task. Faster R-CNN 
+                            and SSD showcased commendable capabilities in object detection, but an overarching consideration
+                             remained—achieving both precision and speed, particularly given the real-time nature of QR code detection.
+                        </p>
+                        <p>Finally, the YOLO (You Only Look Once) model emerged as the clear choice. YOLO's ability to instantly 
+                            detect objects within an image while maintaining noteworthy accuracy resonated with the project's vision. 
+                            Its optimized design for real-time object detection made it an ideal candidate for rapid QR code
+                             identification. </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-            </div></div></div>
-            <section class="about section-padding" id="final">     
-                <div class="container">
-                    <div class="row">
-        
-                        <div class="col-lg-12 col-md-6 col-12">
+    <section class="about section-padding" id="part5">     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Step 5: Training</h3>
+                        <p>
+                            The phase of model training marked a significant stride in the project's evolution. Armed with the YOLO
+                             model as the chosen one, a decision emerged, whether to build upon a pre-trained model or initiate
+                              training from scratch. The consideration of leveraging a pre-trained model was alluring, promising a
+                               head start by capitalizing on prior learning. However, the unique task of QR code detection required a 
+                               level of specificity that warranted meticulous attention. Therefore, I embarked on the journey of
+                                training a YOLO model from the ground up, ensuring its adaptation to the intricacies of QR code 
+                                recognition.
+                        </p>
+                        <p>Then, another important choice awaited, the determination of the number of epochs. The trade-off between
+                             accuracy and time was an important consideration knowing that this project had a deadline. While more 
+                             epochs could potentially lead to heightened accuracy, they also extended the training duration,
+                              challenging the project's timeline. Striking the optimal balance was essential. Anchored in the
+                               understanding that training too long might lead to overfitting and diminishing returns.  </p>
+                        <p>After careful consideration and experimentation, I found that training the YOLO model for 200 epochs 
+                            struck an equilibrium. This choice stemmed from observing the performance-versus-epochs curve, recognizing
+                             that beyond this threshold, further epochs yielded marginal improvements in accuracy. It was a strategic
+                              decision that ensured an optimal balance between achieving higher accuracy and managing the time required
+                               for model training. </p>
+               
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="about section-padding" id="part6">     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Step 6: Evaluation Testing and Optimization</h3>
+                        <p>In the phase of evaluating, testing, and optimizing the trained YOLO model, the initial glimpses of 
+                            progress were indeed promising. The model exhibited a commendable ability to identify QR codes within
+                             images, yet an issue surfaced, over-identification. This revelation, evident from the confusion matrix,
+                              which showed too many false positives and no false negatives, underscored a critical oversight in the
+                               data collection process. Solely relying on images containing QR codes had inadvertently led the model 
+                               to associate every image with a QR code.  </p>
+                        <p> Recognizing the importance of a diverse dataset, I embarked on curating a new, more comprehensive image
+                             database. This iteration encompassed 500 images, including those devoid of QR codes, in order to rectify 
+                             the model's inclination toward over-identification.  To further bolster precision, the identification
+                              threshold was elevated to 80%, designed to reduce false positives and enhance the model's discernment. </p>
+                        <p>The culmination of these strategic adjustments bore fruits beyond expectation. The final result was a 
+                            predictive model that wielded a remarkable 97.94% precision, a testament to the efficacy of iteration,
+                             adaptation, and strategic thinking. 
+                        </p>
+               
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="about section-padding" id="part7">     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Step 7: Code decoding</h3>
+                        <p> For QR code decoding, I leveraged OpenCV's QRCodeDetector() function on the extracted images.
+                             The integration proved seamless and effective, reliably revealing the hidden information within 
+                             the detected QR codes. This efficient application showcased the practical synergy between OpenCV's 
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="about section-padding" id="final">     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
                     <h3 class="w3-xlarge">Finished word cloud generator</h3>
                  
                 <form action='{% url "project3main" %}' method="POST">
