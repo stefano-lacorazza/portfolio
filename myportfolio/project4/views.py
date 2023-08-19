@@ -8,8 +8,9 @@ import requests
 
 # Create your views here.
 def project4(request):
-    
-    return render(request, 'Project4/proyect4.html')
+    form = UploadFileForm()
+
+    return render(request, 'Project4/proyect4.html',  {'form': form})
 
 
 def upload_file(request):
