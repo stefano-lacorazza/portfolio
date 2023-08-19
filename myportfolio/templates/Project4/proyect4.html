@@ -3,7 +3,7 @@
   {% load static %}
 <head>
 
-     <title>Stefano's Portfolio - Profile HTML Page</title>
+     <title>QR Code Extractor</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -35,7 +35,7 @@
         <div class="container">
 
             <a class="navbar-brand" href='{% url "index" %}'>
-                Portfolio Stefano Lacorazza
+                QR Code Extractor by Stefano Lacorazza
            </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,24 +49,16 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#part1" class="nav-link smoothScroll">Step 1</a>
+                        <a href="#part1" class="nav-link smoothScroll">QR Extractor</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#part2" class="nav-link smoothScroll">Step 2</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#part3" class="nav-link smoothScroll">Step 3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#part4" class="nav-link smoothScroll">Step 4</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#final" class="nav-link smoothScroll">Predictor</a>
+                        <a href="#part2" class="nav-link smoothScroll">Repository</a>
                     </li>
                 </ul>
-
+                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                    <a href="{% static 'mainsite/Files/MyResume.pdf' %}" class="custom-btn btn" download="CV">Download CV</a>
+                </div>
 
             </div>
 
@@ -296,7 +288,7 @@
           </div>
 
             <div class="mx-auto col-lg-4 col-md-6 col-12">
-                <h3 class="my-4 pt-4 pt-lg-0">Contact me</h3>
+                <h3 class="my-4 pt-4 pt-lg-0">By: Stefano Lacorazza</h3>
 
                 <p class="mb-1">+57 3112873140</p>
 
