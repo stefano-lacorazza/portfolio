@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from .forms import UploadFileForm
-import pickle
-import os
-import pandas as pd
-from django.http import HttpResponse
-import requests
+from django.http import HttpResponseRedirect
+from .predict import predict
+
+import json 
 
 # Create your views here.
 def project4(request):
@@ -17,8 +16,11 @@ def upload_file(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            handle_uploaded_file(request.FILES["file"])
-            return HttpResponseRedirect("/success/url/")
+
+            dict = predict(request.FILES["image"])
+            context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
+
+            return HttpResponseRedirect("Project4/success4.html", context)
     else:
         form = UploadFileForm()
     return render(request, "upload.html", {"form": form})

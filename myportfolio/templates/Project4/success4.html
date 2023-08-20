@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  {% load crispy_forms_tags %}
+<head>
+
+     <title>QR Code Extractor</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'mainsite/favicon/apple-touch-icon.png' %}">
+     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'mainsite/favicon/favicon-32x32.png' %}">
+     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'mainsite/favicon/favicon-16x16.png' %}">
+     <link rel="manifest" href="{% static 'mainsite/favicon/site.webmanifest' %}">
+     
+     <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.carousel.min.css' %}">
+     <link rel="stylesheet" href="{% static 'mainsite/css/owl.theme.default.min.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="{% static 'mainsite/css/w3.css' %}">
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'mainsite/css/tooplate-ben-resume-style.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href='{% url "index" %}'>
+                QR Code Extractor by Stefano Lacorazza
+           </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a href="https://github.com/stefano-lacorazza/QR_Code_Detector_Notebook" class="custom-btn btn">Repository</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="about section-padding" id="success">     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-12">
+                    <h3 class="w3-xlarge">Result</h3>
+                    <script>
+                    var hits = '{{ hits }}'
+                    var imgs = JSON.parse('{{ imgs|escapejs }}');
+                    var urls = JSON.parse('{{ urls|escapejs }}');
+
+                    for(var i = 0; i < hits; i++) {
+   document.body.innerHTML += '<div><a href="' + urls[i] + '">'+urls[i]+'</a></div>'
+}
+
+
+
+                    </script>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    
+
+
+     <section class="contact section-padding pt-0" id="contact">
+      <div class="container">
+        <div class="row">
+
+          </div>
+
+            <div class="mx-auto col-lg-4 col-md-6 col-12">
+                <h3 class="my-4 pt-4 pt-lg-0">By: Stefano Lacorazza</h3>
+
+                <p class="mb-1">+57 3112873140</p>
+
+                <p>
+                    <a href="mailto: stefano.lacorazza@gmail.com" >
+                        Stefano.lacorazza@gmail.com
+                    <i class="fas fa-arrow-right custom-icon"></i>
+                    </a>
+                </p>
+
+                <ul class="social-links mt-2">
+                    <li><a href="https://www.facebook.com/stefano.lacorazza" rel="noopener" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.linkedin.com/in/stefano-lacorazza/" rel="noopener" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://github.com/stefano-lacorazza" rel="noopener" class="fa fa-github"></a></li>
+                    
+                </ul>
+        
+            </div>
+
+        </div>
+      </div>
+    </section>
+     <!-- SCRIPTS -->
+     <script src="{% static 'mainsite/js/jquery.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/smoothscroll.js' %}"></script>
+     <script src="{% static 'mainsite/js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'mainsite/js/custom.js' %}"></script>
+     
+
+</body>
+</html>
