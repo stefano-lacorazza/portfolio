@@ -3,8 +3,10 @@ from ultralytics import YOLO
 from PIL import Image
 from pathlib import Path
 import time
+from django.templatetags.static import static
 
-model = YOLO('best.pt')  
+
+model = YOLO(static('project4/best.pt'))  
 #dir_path = Path('/QR-codes')
 
 
