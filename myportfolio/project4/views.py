@@ -17,10 +17,11 @@ def upload_file(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
 
-            dict = predict(request.FILES["image"])
-            context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
+            #dict = predict(request.FILES["image"])
+            #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
 
-            return HttpResponseRedirect("Project4/success4.html", context)
+           # return HttpResponseRedirect("Project4/success4.html", context)
+            return HttpResponseRedirect("Project4/proyect4.html", context)
     else:
         form = UploadFileForm()
     return render(request, "upload.html", {"form": form})
