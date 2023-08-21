@@ -10,21 +10,21 @@ model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
 
 #model = YOLO(static('Project4/best.pt'))  
-#dir_path = Path('/QR-codes')
+dir_path = Path('/QR-codes')
 
 
-#def deleteQR():
- #   try:
-#        dir_path.rmdir()
- #   except OSError as e:
-#        print("Error: %s : %s" % (dir_path, e.strerror))
+def deleteQR():
+    try:
+        dir_path.rmdir()
+    except OSError as e:
+        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
     model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
     with open(model_path, 'rb') as model_file:
         model = pickle.load(model_file)
-#    deleteQR()
+#   deleteQR()
 #    source = p_image
 #    results = model.predict(source, conf =0.7)
 #    num_results = len(results[0].boxes.data)
