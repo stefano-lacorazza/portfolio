@@ -20,10 +20,10 @@ def deleteQR():
         print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
-    model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+ #   model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
-    with open(model_path, 'rb') as model_file:
-        model = pickle.load(model_file)
+ #   with open(model_path, 'rb') as model_file:
+ #       model = pickle.load(model_file)
 #    deleteQR()
  #   source = p_image
  #   results = model.predict(source, conf =0.7)
