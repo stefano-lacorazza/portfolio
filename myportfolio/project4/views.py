@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import UploadFileForm
 #from django.http import HttpResponseRedirect
-#from .predict import predict
+from .predict import predict
 #from PIL import Image
 from django.core.files.uploadedfile import SimpleUploadedFile
 #import json 
@@ -27,7 +27,7 @@ def upload_file(request):
             #obj.save()
             source = '\\media\\images\\'+str(img)
             #source = source.encode('unicode_escape')
-            #dict = predict(source)
+            dict = predict(source)
             #rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
             #project = rf.workspace().project("qr-code-detector-jx362")
             #model = project.version(1).model
