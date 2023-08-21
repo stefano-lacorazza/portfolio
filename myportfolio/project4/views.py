@@ -31,7 +31,7 @@ def upload_file(request):
             rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
             project = rf.workspace().project("qr-code-detector-jx362")
             model = project.version(1).model
-            model.predict(source, confidence=40, overlap=30).save("prediction.jpg")
+            #model.predict(source, confidence=40, overlap=30).save("prediction.jpg")
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
             context = {'img':  source  }
             return render(request, "Project4/success4.html", context)
