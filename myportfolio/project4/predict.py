@@ -35,18 +35,18 @@ def predict(p_image):
 
     urls = ()
     imgs = ()
-#    for i in range(num_results):
-#        if i == 0:
-#            source = 'QR-codes/im.jpg'
+    for i in range(num_results):
+        if i == 0:
+            source = 'QR-codes/im.jpg'
             
-#        else:
-#            j =str(i+1)
-#            source = 'QR-codes/im'+j+'.jpg'
+        else:
+            j =str(i+1)
+            source = 'QR-codes/im'+j+'.jpg'
      
-#        img = cv2.imread(source)
-#   imgs.append(source)
-#        retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
-#        urls.append(decoded_info)
+        img = cv2.imread(source)
+        imgs.append(source)
+        retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
+        urls.append(decoded_info)
     
- #   return{ 'hits': num_results, 'imgs': imgs, 'urls' : urls  }
-    return{'imgs': imgs, 'urls' : urls  }
+    return{ 'hits': num_results, 'imgs': imgs, 'urls' : urls  }
+#    return{'imgs': imgs, 'urls' : urls  }
