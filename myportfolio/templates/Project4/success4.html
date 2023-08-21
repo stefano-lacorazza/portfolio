@@ -58,7 +58,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-6 col-12">
                     <h3 class="w3-xlarge">Result</h3>
-                    {{ img }}
+                    {{ if img }}
+                    <img src="{{ img.image.url}}" alt="connect" style="max-height:300px">
                 </div>
             </div>
         </div>

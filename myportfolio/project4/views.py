@@ -18,6 +18,8 @@ def upload_file(request):
         form = UploadFileForm(request.POST, request.FILES)
         #form = UploadFileForm(request.POST)
         if form.is_valid():
+            form.save()
+            img_object = form.instance  
             #img = form.cleaned_data.get("image")
             #obj = QR.objects.create(
             #                     img = img
@@ -26,7 +28,7 @@ def upload_file(request):
             #dict = predict(request.FILES["image"])
             
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
-            context = {'img': form.cleaned_data.get('image')}
+            context = {'img':  img_object  }
             return render(request, "Project4/success4.html", context)
             #return render(request, "Project4/success4.html")
             #return HttpResponseRedirect("Project4/proyect4.html", context)
