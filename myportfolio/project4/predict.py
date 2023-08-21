@@ -34,7 +34,7 @@ def predict(p_image):
     rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
     project = rf.workspace().project("qr-code-detector-jx362")
     model = project.version(1).model
-    model.predict('QR_Image1.jpg', confidence=40, overlap=30).save("prediction.jpg")
+    #model.predict('QR_Image1.jpg', confidence=40, overlap=30).save("prediction.jpg")
  #   model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
     #source = 'QR_Image1.jpg'
