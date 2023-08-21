@@ -25,7 +25,7 @@ def upload_file(request):
             #                     )
             #obj.save()
             source = '/home/laco89/portfolio/myportfolio/media/images/'+str(img)
-            source = source.encode('unicode_escape')
+            #source = source.encode('unicode_escape')
             dict = predict(source)
             
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
