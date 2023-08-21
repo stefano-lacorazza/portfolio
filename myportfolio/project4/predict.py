@@ -32,7 +32,10 @@ def predict(p_image):
 #    deleteQR()
     source = 'QR_Image1.jpg'
     #uploaded_image = Image.open(source)
-    results = model.predict(source, conf =0.7)
+    try:
+        results = model.predict(source, conf =0.7)
+    except Exception as e:
+        print(e)
     
 
  #   num_results = len(results[0].boxes.data)
