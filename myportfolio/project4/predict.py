@@ -29,8 +29,8 @@ def predict(p_image):
     #                           path=path_weightfile, source='local')
     model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
- #   source = p_image
- #   results = model.predict(source, conf =0.7)
+    source = p_image
+    results = model.predict(source, conf =0.7)
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
  #   for r in results:
