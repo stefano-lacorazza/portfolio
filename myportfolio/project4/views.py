@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import UploadFileForm
 from django.http import HttpResponseRedirect
-#from .predict import predict
+from .predict import predict
 
 import json 
 
