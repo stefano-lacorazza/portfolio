@@ -24,10 +24,12 @@ def upload_file(request):
             #                     img = img
             #                     )
             #obj.save()
-            dict = predict('/home/laco89/portfolio/myportfolio/media/images/'+str(img))
+            source = '/home/laco89/portfolio/myportfolio/media/images/'+str(img)
+            source = source.encode('unicode_escape')
+            dict = predict(source)
             
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
-            context = {'img':  img  }
+            context = {'img':  source  }
             return render(request, "Project4/success4.html", context)
             #return render(request, "Project4/success4.html")
             #return HttpResponseRedirect("Project4/proyect4.html", context)
