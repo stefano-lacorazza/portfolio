@@ -8,6 +8,7 @@
 #import os
 #model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 from django.core.files import File
+import torch
 
 #model = YOLO(static('Project4/best.pt'))  
 #dir_path = Path('/QR-codes')
@@ -26,9 +27,9 @@ def predict(p_image):
  #       model = pickle.load(model_file)
     #f = open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w")
     #model = File(f)
-    with open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w") as f:
-        model = File(f)
-        
+    #with open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w") as f:
+    #    model = File(f)
+    model = torch.load("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt") 
 #    deleteQR()
  #   source = p_image
  #   results = model.predict(source, conf =0.7)
