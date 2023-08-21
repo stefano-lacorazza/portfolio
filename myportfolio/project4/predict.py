@@ -37,7 +37,7 @@ def predict(p_image):
     #    results = model.predict(source, conf =0.7)
     #except Exception as e:
     #    print(e)
-    results = model.predict(source, conf =0.7)
+    results = model(source)
 
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
