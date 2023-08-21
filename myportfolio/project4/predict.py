@@ -4,7 +4,7 @@ from PIL import Image
 from pathlib import Path
 import time
 
-#model = YOLO('best.pt')  
+model = YOLO('best.pt')  
 #dir_path = Path('/QR-codes')
 
 
