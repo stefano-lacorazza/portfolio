@@ -10,6 +10,7 @@ from PIL import Image
 #model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 from django.core.files import File
 import torch
+from roboflow import Roboflow
 
 #model = YOLO(static('Project4/best.pt'))  
 #dir_path = Path('/QR-codes')
@@ -28,16 +29,21 @@ def predict(p_image):
     #path_weightfile = r"/home/laco89/portfolio/myportfolio/project4/best.pt"
     #model = torch.hub.load(path_hubconfig, 'custom',
     #                           path=path_weightfile, source='local')
-    model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/runs/detect/train12/weights/best.pt")
+    #model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/runs/detect/train12/weights/best.pt")
+    
+    rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
+    project = rf.workspace().project("qr-code-detector-jx362")
+    model = project.version(1).model
+    model.predict('QR_Image1.jpg', confidence=40, overlap=30).save("prediction.jpg")
  #   model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
-    source = 'QR_Image1.jpg'
+    #source = 'QR_Image1.jpg'
     #uploaded_image = Image.open(source)
     #try:
     #    results = model.predict(source, conf =0.7)
     #except Exception as e:
-    #    print(e)
-    results = model(source)
+    #    response_dict.update({'error': str(e)})
+    
 
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
