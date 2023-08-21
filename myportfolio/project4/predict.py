@@ -1,7 +1,7 @@
 #import cv2 
 #from ultralytics import YOLO
 #from PIL import Image
-#from pathlib import Path
+from pathlib import Path
 #import time
 #from django.templatetags.static import static
 import pickle
@@ -10,7 +10,7 @@ import os
 
 
 #model = YOLO(static('Project4/best.pt'))  
-#dir_path = Path('/QR-codes')
+dir_path = Path('/QR-codes')
 
 
 #def deleteQR():
