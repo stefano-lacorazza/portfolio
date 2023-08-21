@@ -4,15 +4,15 @@
 #from pathlib import Path
 #import time
 
-model = YOLO('best.pt')  
-dir_path = Path('/QR-codes')
+#model = YOLO('best.pt')  
+#dir_path = Path('/QR-codes')
 
 
-def deleteQR():
-    try:
-        dir_path.rmdir()
-    except OSError as e:
-        print("Error: %s : %s" % (dir_path, e.strerror))
+#def deleteQR():
+ #   try:
+#        dir_path.rmdir()
+ #   except OSError as e:
+#        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
 #    deleteQR()
