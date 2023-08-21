@@ -153,7 +153,7 @@ STATIC_ROOT = "/home/laco89/portfolio/myportfolio/static"
 #   
 #]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  
+MEDIA_ROOT = "/home/laco89/portfolio/myportfolio/media"  
 MEDIA_URL = '/media/'
 
 # Default primary key field type
