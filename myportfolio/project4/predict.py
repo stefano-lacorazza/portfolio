@@ -31,8 +31,8 @@ def predict(p_image):
     model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
     source = 'QR_Image1.jpg'
-    uploaded_image = Image.open(source)
-    results = model.predict(uploaded_image, conf =0.7)
+    #uploaded_image = Image.open(source)
+    results = model.predict(source, conf =0.7)
     
 
  #   num_results = len(results[0].boxes.data)
