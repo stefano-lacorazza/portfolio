@@ -14,7 +14,8 @@ def project4(request):
 
 def upload_file(request):
     if request.method == "POST":
-        form = UploadFileForm(request.POST, request.FILES)
+        #form = UploadFileForm(request.POST, request.FILES)
+        form = UploadFileForm(request.POST)
         if form.is_valid():
 
             #dict = predict(request.FILES["image"])
