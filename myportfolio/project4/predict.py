@@ -29,7 +29,7 @@ def predict(p_image):
     #                           path=path_weightfile, source='local')
     model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
-    source = p_image
+    source = 'QR_Image1.jpg'
     uploaded_image = Image.open(source)
     results = model.predict(uploaded_image, conf =0.7)
     
