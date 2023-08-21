@@ -146,10 +146,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = "/home/laco89/portfolio/myportfolio/static"
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-   
-]
+#STATICFILES_DIRS = [
+#    BASE_DIR / "static",
+#   
+#]
 
 
 # Default primary key field type
