@@ -6,11 +6,11 @@ from pathlib import Path
 #from django.templatetags.static import static
 import pickle
 import os
-#model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
 
 #model = YOLO(static('Project4/best.pt'))  
-dir_path = Path('/QR-codes')
+#dir_path = Path('/QR-codes')
 
 
 #def deleteQR():
