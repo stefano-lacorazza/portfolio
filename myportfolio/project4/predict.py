@@ -4,8 +4,12 @@ from PIL import Image
 from pathlib import Path
 import time
 from django.templatetags.static import static
+import pickle
+import os
+model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
-
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
 #model = YOLO(static('Project4/best.pt'))  
 #dir_path = Path('/QR-codes')
 
