@@ -28,9 +28,9 @@ def upload_file(request):
             source = '\\media\\images\\'+str(img)
             #source = source.encode('unicode_escape')
             #dict = predict(source)
-            rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
-            project = rf.workspace().project("qr-code-detector-jx362")
-            model = project.version(1).model
+            #rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
+            #project = rf.workspace().project("qr-code-detector-jx362")
+            #model = project.version(1).model
             #model.predict(source, confidence=40, overlap=30).save("prediction.jpg")
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
             context = {'img':  source  }
