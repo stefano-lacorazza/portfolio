@@ -24,7 +24,7 @@ def upload_file(request):
             #                     img = img
             #                     )
             #obj.save()
-            source = '/home/laco89/portfolio/myportfolio/media/images/'+str(img)
+            source = '\\home\\laco89\\portfolio\\myportfolio\\media\\images\\'+str(img)
             #source = source.encode('unicode_escape')
             dict = predict(source)
             
