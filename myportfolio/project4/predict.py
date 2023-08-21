@@ -36,8 +36,8 @@ def predict(p_image):
         print("coud not predict")
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
- #   for r in results:
- #           r.save_crop('')
+    for r in results:
+            r.save_crop('')
  #   time.sleep(3)
 
     urls = ()
