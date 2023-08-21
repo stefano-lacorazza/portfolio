@@ -1,5 +1,5 @@
 #import cv2 
-#from ultralytics import YOLO
+from ultralytics import YOLO
 #from PIL import Image
 #from pathlib import Path
 #import time
@@ -22,7 +22,7 @@ import torch
 
 def predict(p_image):
 
-    model = torch.load(r"/home/laco89/portfolio/myportfolio/project4/best.pt") 
+    model = YOLO(torch.load(r"/home/laco89/portfolio/myportfolio/project4/best.pt") )
 #    deleteQR()
  #   source = p_image
  #   results = model.predict(source, conf =0.7)
