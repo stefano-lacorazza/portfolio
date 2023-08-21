@@ -1,6 +1,6 @@
 #import cv2 
 from ultralytics import YOLO
-from ultralytics.yolo.v8.detect.predict import DetectionPredictor
+#from ultralytics.yolo.v8.detect.predict import DetectionPredictor
 from PIL import Image
 #from pathlib import Path
 #import time

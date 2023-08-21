@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import UploadFileForm
 #from django.http import HttpResponseRedirect
 from .predict import predict
-from PIL import Image
+#from PIL import Image
 from django.core.files.uploadedfile import SimpleUploadedFile
 #import json 
 #from .models import QR
