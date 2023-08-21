@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'channels_redis',
     'crispy_forms',
     "crispy_bootstrap4",
+    'project3',
+    'project4',
     
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
