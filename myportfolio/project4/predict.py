@@ -1,23 +1,23 @@
-import cv2 
-from ultralytics import YOLO
-from PIL import Image
-from pathlib import Path
-import time
-from django.templatetags.static import static
-import pickle
-import os
-model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+#import cv2 
+#from ultralytics import YOLO
+#from PIL import Image
+#from pathlib import Path
+#import time
+#from django.templatetags.static import static
+#import pickle
+#import os
+#model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
 
 #model = YOLO(static('Project4/best.pt'))  
-dir_path = Path('/QR-codes')
+#dir_path = Path('/QR-codes')
 
 
-def deleteQR():
-    try:
-        dir_path.rmdir()
-    except OSError as e:
-        print("Error: %s : %s" % (dir_path, e.strerror))
+#def deleteQR():
+#    try:
+#        dir_path.rmdir()
+#    except OSError as e:
+#        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
  #   model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
