@@ -8,14 +8,14 @@ model = YOLO('best.pt')
 #dir_path = Path('/QR-codes')
 
 
-#def deleteQR():
-#    try:
-#        dir_path.rmdir()
-#    except OSError as e:
-#        print("Error: %s : %s" % (dir_path, e.strerror))
+def deleteQR():
+    try:
+        dir_path.rmdir()
+    except OSError as e:
+        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
-#    deleteQR()
+    deleteQR()
     source = p_image
 #    results = model.predict(source, conf =0.7)
 #    num_results = len(results[0].boxes.data)
