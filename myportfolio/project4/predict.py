@@ -1,6 +1,6 @@
 #import cv2 
 from ultralytics import YOLO
-#from PIL import Image
+from PIL import Image
 #from pathlib import Path
 #import time
 #from django.templatetags.static import static
@@ -29,10 +29,10 @@ def predict(p_image):
     #                           path=path_weightfile, source='local')
     model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
-    #source = p_image
+    source = p_image
+    uploaded_image = Image.open(source)
+    results = model.predict(uploaded_image, conf =0.7)
     
-    #results = model.predict('QR_Image1.jpg', conf =0.7)
-    results = model('QR_Image1.jpg')
 
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
