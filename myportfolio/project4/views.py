@@ -24,4 +24,4 @@ def upload_file(request):
             #return HttpResponseRedirect("Project4/proyect4.html", context)
     else:
         form = UploadFileForm()
-    return render(request, "upload.html", {"form": form})
+    return render(request, "upload.html")
