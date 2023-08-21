@@ -17,7 +17,7 @@ def upload_file(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            #form.save()
+            form.save()
             #img_object = form.instance  
             img = form.cleaned_data.get("image")
             #obj = QR.objects.create(
