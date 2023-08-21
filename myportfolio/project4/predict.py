@@ -21,14 +21,7 @@ import torch
 #        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
-  #  model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
- #   with open(model_path, 'rb') as model_file:
- #       model = pickle.load(model_file)
-    #f = open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w")
-    #model = File(f)
-    #with open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w") as f:
-    #    model = File(f)
     model = torch.load("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt") 
 #    deleteQR()
  #   source = p_image
