@@ -19,7 +19,7 @@ def upload_file(request):
 
             #dict = predict(request.FILES["image"])
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
-            context = {'img': request.FILES["image"]}
+            context = {'img': form.cleaned_data.get('text')}
             return HttpResponseRedirect("Project4/success4.html", context)
             #return HttpResponseRedirect("Project4/proyect4.html", context)
     else:
