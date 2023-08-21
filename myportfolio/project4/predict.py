@@ -30,14 +30,13 @@ def predict(p_image):
     model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
     source = p_image
-    try:
-        results = model.predict(source.encode('unicode_escape'), conf =0.7)
-    except Exception as ex:
-        print("coud not predict")
+    
+    results = model.predict(source.encode('unicode_escape'), conf =0.7)
+
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
-    for r in results:
-            r.save_crop('')
+ #   for r in results:
+  #          r.save_crop('')
  #   time.sleep(3)
 
     urls = ()
