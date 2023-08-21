@@ -33,11 +33,11 @@ def predict(p_image):
 #    deleteQR()
     source = 'QR_Image1.jpg'
     #uploaded_image = Image.open(source)
-    try:
-        results = model.predict(source, conf =0.7)
-    except Exception as e:
-        print(e)
-    
+    #try:
+    #    results = model.predict(source, conf =0.7)
+    #except Exception as e:
+    #    print(e)
+    results = model.predict(source, conf =0.7)
 
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
