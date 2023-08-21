@@ -28,7 +28,7 @@ def predict(p_image):
     #path_weightfile = r"/home/laco89/portfolio/myportfolio/project4/best.pt"
     #model = torch.hub.load(path_hubconfig, 'custom',
     #                           path=path_weightfile, source='local')
-    #model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/runs/detect/train12/weights/best.pt")
+    model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/runs/detect/train12/weights/best.pt")
  #   model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
     source = 'QR_Image1.jpg'
