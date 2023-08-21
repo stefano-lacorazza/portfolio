@@ -58,19 +58,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-6 col-12">
                     <h3 class="w3-xlarge">Result</h3>
-                    <script>
-                    var hits = '{{ hits }}'
-                    var imgs = JSON.parse('{{ imgs|escapejs }}');
-                    var urls = JSON.parse('{{ urls|escapejs }}');
-
-                    for(var i = 0; i < hits; i++) {
-   document.body.innerHTML += '<div><a href="' + urls[i] + '">'+urls[i]+'</a></div>'
-}
-
-
-
-                    </script>
-                    </div>
+                    {{ img }}
+                </div>
             </div>
         </div>
     </section>
