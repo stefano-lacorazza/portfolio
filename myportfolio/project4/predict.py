@@ -15,8 +15,8 @@ def deleteQR():
         print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
-    deleteQR()
-    source = p_image
+#    deleteQR()
+#    source = p_image
 #    results = model.predict(source, conf =0.7)
 #    num_results = len(results[0].boxes.data)
 #    qcd = cv2.QRCodeDetector()
@@ -35,7 +35,7 @@ def predict(p_image):
 #            source = 'QR-codes/im'+j+'.jpg'
      
 #        img = cv2.imread(source)
-    imgs.append(source)
+#   imgs.append(source)
 #        retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
 #        urls.append(decoded_info)
     
