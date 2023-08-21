@@ -6,7 +6,7 @@ import time
 from django.templatetags.static import static
 
 
-model = YOLO(static('Project4/best.pt'))  
+#model = YOLO(static('Project4/best.pt'))  
 #dir_path = Path('/QR-codes')
 
 
