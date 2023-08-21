@@ -18,7 +18,7 @@ def upload_file(request):
         #form = UploadFileForm(request.POST)
         if form.is_valid():
 
-            #dict = predict(request.FILES["image"])
+            dict = predict(form.cleaned_data.get("image"))
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
             #context = {'img': form.cleaned_data.get('text')}
             #return render(request, "Project4/success4.html", context)
