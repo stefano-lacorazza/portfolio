@@ -1,6 +1,6 @@
 import cv2 
 #from ultralytics import YOLO
-#from PIL import Image
+from PIL import Image
 from pathlib import Path
 import time
 
