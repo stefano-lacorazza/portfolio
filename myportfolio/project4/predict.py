@@ -22,7 +22,7 @@ import torch
 
 def predict(p_image):
 
-    model = torch.load("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt") 
+    model = torch.load(r"C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt") 
 #    deleteQR()
  #   source = p_image
  #   results = model.predict(source, conf =0.7)
