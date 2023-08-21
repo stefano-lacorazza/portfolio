@@ -1,13 +1,13 @@
 #import cv2 
 #from ultralytics import YOLO
 #from PIL import Image
-from pathlib import Path
+#from pathlib import Path
 #import time
 #from django.templatetags.static import static
-import pickle
-import os
-model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
-
+#import pickle
+#import os
+#model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+from django.core.files import File
 
 #model = YOLO(static('Project4/best.pt'))  
 #dir_path = Path('/QR-codes')
@@ -20,10 +20,15 @@ model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 #        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
-    model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+  #  model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
 
-    with open(model_path, 'rb') as model_file:
-        model = pickle.load(model_file)
+ #   with open(model_path, 'rb') as model_file:
+ #       model = pickle.load(model_file)
+    #f = open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w")
+    #model = File(f)
+    with open("C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt", "w") as f:
+        model = File(f)
+        
 #    deleteQR()
  #   source = p_image
  #   results = model.predict(source, conf =0.7)
