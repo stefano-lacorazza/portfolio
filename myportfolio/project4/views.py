@@ -18,11 +18,11 @@ def upload_file(request):
         form = UploadFileForm(request.POST, request.FILES)
         #form = UploadFileForm(request.POST)
         if form.is_valid():
-            img = form.cleaned_data.get("image")
-            obj = QR.objects.create(
-                                 img = img
-                                 )
-            obj.save()
+            #img = form.cleaned_data.get("image")
+            #obj = QR.objects.create(
+            #                     img = img
+            #                     )
+            #obj.save()
             #dict = predict(request.FILES["image"])
             
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
