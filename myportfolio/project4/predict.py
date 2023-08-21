@@ -31,7 +31,8 @@ def predict(p_image):
 #    deleteQR()
     #source = p_image
     
-    results = model.predict('QR_Image1.jpg', conf =0.7)
+    #results = model.predict('QR_Image1.jpg', conf =0.7)
+    results = model('QR_Image1.jpg')
 
  #   num_results = len(results[0].boxes.data)
  #   qcd = cv2.QRCodeDetector()
