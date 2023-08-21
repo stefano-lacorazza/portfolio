@@ -24,7 +24,7 @@ def upload_file(request):
             #                     img = img
             #                     )
             #obj.save()
-            #dict = predict(img.image)
+            dict = predict('/media/images'+img)
             
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
             context = {'img':  img  }
