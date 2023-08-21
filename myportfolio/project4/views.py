@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from .forms import UploadFileForm
 #from django.http import HttpResponseRedirect
-#from .predict import predict
-#from PIL import Image
-#from django.core.files.uploadedfile import SimpleUploadedFile
+from .predict import predict
+from PIL import Image
+from django.core.files.uploadedfile import SimpleUploadedFile
 #import json 
 #from .models import QR
 # Create your views here.
@@ -24,7 +24,7 @@ def upload_file(request):
             #                     img = img
             #                     )
             #obj.save()
-            #dict = predict(request.FILES["image"])
+            dict = predict(img)
             
             #context = {'hits': dict['hits'], 'imgs': json.dumps(dict['imgs']), 'urls': json.dumps(dict['urls'])}
             context = {'img':  img  }
