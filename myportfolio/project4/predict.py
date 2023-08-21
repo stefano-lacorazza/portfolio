@@ -5,7 +5,7 @@ from pathlib import Path
 import time
 
 model = YOLO('best.pt')  
-#dir_path = Path('/QR-codes')
+dir_path = Path('/QR-codes')
 
 
 def deleteQR():
