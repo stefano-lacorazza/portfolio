@@ -24,15 +24,12 @@ from roboflow import Roboflow
 #        print("Error: %s : %s" % (dir_path, e.strerror))
 
 def predict(p_image):
-
-
     model = YOLO(r"C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt")
     #model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
-
-    results = model.predict(p_image, conf =0.5)
-
+    path = r'C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\media\images'+'\\'+p_image
+    #results = model.predict(p_image, conf =0.5)
+    results = model(path)
     
-
     num_results = len(results[0].boxes.data)
     qcd = cv2.QRCodeDetector()
     for r in results:
@@ -50,7 +47,9 @@ def predict(p_image):
             source = r'\static\QR-codes\im'+j+'.jpg'
      
         img = cv2.imread("C:\\Users\\laco-\\OneDrive\\Documentos\\GitHub\\portfolio\\myportfolio"+source)
-       # img = cv2.imread("/home/laco89/portfolio/myportfolio/"+source)
+
+
+        #img = cv2.imread("/home/laco89/portfolio/myportfolio/"+source)
         imgs.append(source)
         try:
             retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)

@@ -2,10 +2,12 @@ from django import forms
 #from django.db import models  
 from .models import UploadImage  
 
-class UploadFileForm(forms.Form):
-    #model = UploadImage
+class UploadFileForm(forms.ModelForm):
+    class Meta:
+        model = UploadImage
+        fields = ['image',] 
     image = forms.ImageField(label="Image file")
-    #fields = '__all__'  
+    
     #class Meta:
     #    model = UploadImage 
     #    fields = ('image', )
