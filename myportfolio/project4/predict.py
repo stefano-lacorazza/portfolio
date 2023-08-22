@@ -25,34 +25,19 @@ from roboflow import Roboflow
 
 def predict(p_image):
 
-    #model = YOLO.load(torch.load(r"/home/laco89/portfolio/myportfolio/project4/best.pt") )
-    #model = YOLO.load(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
-    #path_weightfile = r"/home/laco89/portfolio/myportfolio/project4/best.pt"
-    #model = torch.hub.load(path_hubconfig, 'custom',
-    #                           path=path_weightfile, source='local')
+
     model = YOLO(r"C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt")
-    
-    #rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
-    #project = rf.workspace().project("qr-code-detector-jx362")
-    #model = project.version(1).model
-    #model.predict(p_image, confidence=40, overlap=30).save("prediction.jpg")
-    #model.predict(p_image)
+    #model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
+
     results = model.predict(p_image, conf =0.5)
- #   model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
-#    deleteQR()
-    #source = 'QR_Image1.jpg'
-    #uploaded_image = Image.open(source)
-    #try:
-    #    results = model.predict(source, conf =0.7)
-    #except Exception as e:
-    #    response_dict.update({'error': str(e)})
+
     
 
     num_results = len(results[0].boxes.data)
     qcd = cv2.QRCodeDetector()
     for r in results:
         r.save_crop(r'C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\static')
- #   time.sleep(3)
+        #r.save_crop(r'\home\laco89\portfolio\myportfolio\static')
 
     urls = []
     imgs = []
@@ -65,6 +50,7 @@ def predict(p_image):
             source = r'\static\QR-codes\im'+j+'.jpg'
      
         img = cv2.imread("C:\\Users\\laco-\\OneDrive\\Documentos\\GitHub\\portfolio\\myportfolio"+source)
+       # img = cv2.imread("/home/laco89/portfolio/myportfolio/"+source)
         imgs.append(source)
         try:
             retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
@@ -75,4 +61,3 @@ def predict(p_image):
     
     return{ 'hits': num_results, 'imgs': imgs, 'urls' : urls  }
     
-#    return{'imgs': imgs, 'urls' : urls  }

@@ -27,7 +27,9 @@ def upload_file(request):
             #obj.save()
             #ource = r'C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\media'+str(img)
             #source = source.encode('unicode_escape')
+            f = Image.open(img)
             dict = predict(Image.open(img))
+            f.close()
             #rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
             #project = rf.workspace().project("qr-code-detector-jx362")
             #model = project.version(1).model
