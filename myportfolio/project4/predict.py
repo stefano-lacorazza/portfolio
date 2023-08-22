@@ -1,4 +1,4 @@
-#import cv2 
+import cv2 
 from ultralytics import YOLO
 #from ultralytics.yolo.v8.detect.predict import DetectionPredictor
 from PIL import Image
@@ -8,6 +8,7 @@ from PIL import Image
 #import pickle
 #import os
 #model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+#import numpy as np
 from django.core.files import File
 import torch
 from roboflow import Roboflow
@@ -29,12 +30,14 @@ def predict(p_image):
     #path_weightfile = r"/home/laco89/portfolio/myportfolio/project4/best.pt"
     #model = torch.hub.load(path_hubconfig, 'custom',
     #                           path=path_weightfile, source='local')
-    #model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/runs/detect/train12/weights/best.pt")
+    model = YOLO(r"C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt")
     
-    rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
-    project = rf.workspace().project("qr-code-detector-jx362")
-    model = project.version(1).model
-    model.predict(p_image, confidence=40, overlap=30).save("prediction.jpg")
+    #rf = Roboflow(api_key="PNtIMFu4RUL4mGqZc01W")
+    #project = rf.workspace().project("qr-code-detector-jx362")
+    #model = project.version(1).model
+    #model.predict(p_image, confidence=40, overlap=30).save("prediction.jpg")
+    #model.predict(p_image)
+    results = model.predict(p_image, conf =0.5)
  #   model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
 #    deleteQR()
     #source = 'QR_Image1.jpg'
@@ -45,27 +48,31 @@ def predict(p_image):
     #    response_dict.update({'error': str(e)})
     
 
- #   num_results = len(results[0].boxes.data)
- #   qcd = cv2.QRCodeDetector()
- #   for r in results:
-  #          r.save_crop('')
+    num_results = len(results[0].boxes.data)
+    qcd = cv2.QRCodeDetector()
+    for r in results:
+        r.save_crop(r'C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\static')
  #   time.sleep(3)
 
-    urls = ()
-    imgs = ()
-  #  for i in range(num_results):
-  #      if i == 0:
-  #          source = 'QR-codes/im.jpg'
+    urls = []
+    imgs = []
+    for i in range(num_results):
+        if i == 0:
+            source = r'\static\QR-codes\im.jpg'
             
-  #      else:
-   #         j =str(i+1)
-   #         source = 'QR-codes/im'+j+'.jpg'
+        else:
+            j =str(i+1)
+            source = r'\static\QR-codes\im'+j+'.jpg'
      
-   #     img = cv2.imread(source)
-   #     imgs.append(source)
-  #      retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
- #       urls.append(decoded_info)
+        img = cv2.imread("C:\\Users\\laco-\\OneDrive\\Documentos\\GitHub\\portfolio\\myportfolio"+source)
+        imgs.append(source)
+        try:
+            retval, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(img)
+            if retval:
+                urls.append(decoded_info[0])
+        except OSError as e:
+            print("Error")
     
-#    return{ 'hits': num_results, 'imgs': imgs, 'urls' : urls  }
+    return{ 'hits': num_results, 'imgs': imgs, 'urls' : urls  }
     
-    return{'imgs': imgs, 'urls' : urls  }
+#    return{'imgs': imgs, 'urls' : urls  }

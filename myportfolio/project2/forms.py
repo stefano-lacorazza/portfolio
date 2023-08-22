@@ -7,7 +7,6 @@ city_Choices = (
 )   
 class rentForm(forms.Form):
     city = forms.ChoiceField(label="City", choices =city_Choices )
-
     address = forms.CharField(label='Property address')
     built_Area = forms.IntegerField(label='Buit area in m2')
     private_Area = forms.IntegerField(label='Total area in m2')

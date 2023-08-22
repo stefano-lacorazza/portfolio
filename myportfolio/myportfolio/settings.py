@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jjapnr5d3cx4yed8=sohy!%9e2*)w^(#%(6o2=9cb&r4r*qq8!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['laco89.pythonanywhere.com', 'localhost', 'stefanolacorazza.com', 'www.stefanolacorazza.com',]
+ALLOWED_HOSTS = ['laco89.pythonanywhere.com', 'localhost', 'stefanolacorazza.com', 'www.stefanolacorazza.com', '127.0.0.1']
 
 
 # Application definition
@@ -145,14 +145,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "/home/laco89/portfolio/myportfolio/static"
+#STATIC_ROOT = r"C:/Users/laco-/OneDrive/Documentos/GitHub/portfolio/myportfolio/static"
 
-#STATICFILES_DIRS = [
-#    BASE_DIR / "static",
-#   
-#]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/var/www/static/",
+]
 
-MEDIA_ROOT = "/home/laco89/portfolio/myportfolio/media"  
+MEDIA_ROOT = r"C:/Users/laco-/OneDrive/Documentos/GitHub/portfolio/myportfolio/media"  
 MEDIA_URL = '/media/'
 
 # Default primary key field type

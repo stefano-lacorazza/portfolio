@@ -71,16 +71,7 @@
                 <div class="col-lg-12 col-md-6 col-12">
                     <h3 class="mb-4">QR code detector using Machine Learning
                     </h3>
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <h3>Showcased Skills</h3>
-                        <p><ul>
-                          <li>Python</li>
-                          <li>Data processing</li>
-                          <li>Machine Learning</li>
-                          <li>Deep Learning</li>
-                        </ul></p>
-
-                    </div>
+                
                 </div>
                 <div class="col-lg-12 col-md-6 col-12"></div>
                     <p>This project started as a tecnical challenge by well-regarded digital solutions company. At first, it was a bit overwhelming, and
@@ -105,8 +96,9 @@
                 <p>The project commenced with the intriguing task of gathering QR code images from the vast expanse of the internet. 
                     Additionally, I reached out to friends, urging them to contribute any QR images they might have. This collaborative 
                     data collection process laid the foundation for a diverse and comprehensive dataset.</p>
-                    <p>The initial database contained just 50 images, each hosting QR codes in different orientations—a modest yet promising beginning.</p>
-                    You can find here the first batch of images.</p>
+                    <p>The initial database contained just 50 images, each hosting QR codes in different orientations—a modest yet 
+                        promising beginning.</p>
+                    
                     <p>These images served as the project's foundation, showcasing QR codes in various contexts. With this 
                         starting point, I was ready to move on to preprocessing, feature extraction, and model selection, each step 
                         building the ultimate objective of a robust QR extractor application.</p>
@@ -231,7 +223,59 @@
                             predictive model that wielded a remarkable 97.94% precision, a testament to the efficacy of iteration,
                              adaptation, and strategic thinking. 
                         </p>
-               
+                        <p>The following curves showcase the models ablity to accurately identify QR codes in the test database.</p>
+                        <style>
+                            .container {
+                              align-items: center;
+                              justify-content: center;
+                            }
+                            
+                            img {
+                              max-width: 50%;
+                              max-height:50%;
+                              float: left;
+                            }
+                            
+                            </style>
+                            
+                              
+                                <div class="image">
+                                  <img src="{% static 'Project4/PR_curve.png' %}">
+                                </div>
+                                <div class="about section-padding">
+                                    <div class="col-lg-12 col-md-6 col-12">
+                                        <p>A precision-recall curve is used to assess the performance of a 
+                                            classification model, particularly when dealing with imbalanced datasets like the one I used.
+                                             The curve showcases the trade-off between
+                                               precision and recall at various thresholds set for classifying instances into the positive
+                                                class.</p>
+                                  <p>The precision values exhibited by this model's curve remain consistently above the baseline,
+                                     indicating that the model's positive predictions are highly reliable. Even when the recall starts
+                                      to rise, the precision does not plummet, demonstrating that the model maintains its ability 
+                                      to make accurate positive predictions even as it becomes more inclusive.</p>
+                                </div>
+                                </div>
+                                <div class="image">
+                                    <img src="{% static 'Project4/F1_curve.png' %}">
+                                  </div>
+                                  <div class="about section-padding">
+                                      <div class="col-lg-12 col-md-6 col-12">
+                                    
+                                        
+                                    <p>The F1 Confidence Curve for the model provides an insight into its performance, accounting for
+                                         both precision and recall across different confidence thresholds. As the threshold for 
+                                         classifying instances varies, the curve adeptly illustrates how the model's precision and
+                                          recall interact.</p>
+
+                                    <p>  At the outset, as the threshold is set more conservatively, the curve exhibits a trend of 
+                                        elevated precision, indicating that the model is cautious in making positive predictions. 
+                                        This level of precision is maintained even as the threshold gradually decreases. This shows
+                                         the model's ability to ensure that the positive predictions it makes are robust, leading to
+                                          a reduced risk of false positives.</p>
+                                  </div>
+                                  </div>
+                            
+                          </html>
                     </div>
             </div>
         </div>
