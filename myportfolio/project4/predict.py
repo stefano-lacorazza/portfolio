@@ -27,6 +27,8 @@ def predict(p_image):
     model = YOLO(r"C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\project4\best.pt")
     #model = YOLO(r"/home/laco89/portfolio/myportfolio/project4/best.pt")
     path = r'C:\Users\laco-\OneDrive\Documentos\GitHub\portfolio\myportfolio\media\images'+'\\'+p_image
+    #path = r'/home/laco89/portfolio/myportfolio/media/images'+'/'+p_image
+    #path = r'/home/laco89/C:/Users/laco-/OneDrive/Documentos/GitHub/portfolio/myportfolio/media/images'+'/'+p_image
     #results = model.predict(p_image, conf =0.5)
     results = model(path)
     
