@@ -30,7 +30,7 @@ def predict(p_image):
     #path = r'/home/laco89/portfolio/myportfolio/media/images'+'/'+p_image
     #path = r'/home/laco89/C:/Users/laco-/OneDrive/Documentos/GitHub/portfolio/myportfolio/media/images'+'/'+p_image
     #results = model.predict(p_image, conf =0.5)
-    results = model(path)
+    results = model(path, conf =0.6)
     
     num_results = len(results[0].boxes.data)
     qcd = cv2.QRCodeDetector()
@@ -48,7 +48,7 @@ def predict(p_image):
             j =str(i+1)
             source = r'\static\QR-codes\im'+j+'.jpg'
      
-        img = cv2.imread("C:\\Users\\laco-\\OneDrive\\Documentos\\GitHub\\portfolio\\myportfolio"+source)
+        img = cv2.imread("C:\\Users\\laco-\\OneDrive\\Documentos\\GitHub\\portfolio\\myportfolio"+'\\'+source)
 
 
         #img = cv2.imread("/home/laco89/portfolio/myportfolio/"+source)
